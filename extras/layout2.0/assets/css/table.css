@@ -1,0 +1,6 @@
+th, td { white-space: nowrap; width: auto;}
+div.dataTables_wrapper {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 10px;
+}
