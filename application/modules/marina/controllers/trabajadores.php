@@ -18,6 +18,8 @@ class Trabajadores extends CI_Controller{
 			$this->menu = $this->load->view('layout2.0/menus/marina_menu_admin_supervisor','',TRUE);
 		elseif( $this->session->userdata('tipo_usuario') == 16)
 			$this->menu = $this->load->view('layout2.0/menus/menu_marina_supervisor','',TRUE);
+		elseif( $this->session->userdata('tipo_usuario') == 18)
+			$this->menu = $this->load->view('layout2.0/menus/menu_sanatorio','',TRUE);
 		else
 			redirect('/usuarios/login/index', 'refresh');
    	}

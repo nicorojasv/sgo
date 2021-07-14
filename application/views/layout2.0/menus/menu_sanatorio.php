@@ -20,9 +20,7 @@
 <li>
 	<a href="javascript:void(0)"><i class="fa fa-book"></i> <span class="title"> Solicitudes de Contratos </span></a>
 	<ul class="sub-menu" <?php if(isset($menu)){if($menu == '1.5')echo "style='display: block;'"; }?>>
-		<li class="clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'solicitudes_pendientes')echo "active"; }?> " data="1.5-solicitudes_pendientes">
-			<a href="<?php echo base_url() ?>marina/contratos/solicitudes_pendientes"><i class="fa fa-user"></i> <span class="title"> Solicitudes Pendientes </span></a>
-		</li>
+		
 		<li class="clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'solicitudes_completas')echo "active"; }?> " data="1.5-solicitudes_completas">
 			<a href="<?php echo base_url() ?>marina/contratos/solicitudes_completas"><i class="fa fa-user"></i> <span class="title"> Solicitudes Completas </span></a>
 		</li>
@@ -64,11 +62,7 @@
 		<li>
 			<a class="Marina_chillan" href="javascript:void(0)"><i class="fa fa-user"></i> <span class="title"> Solicitudes de Contratos marina_chillan </span></a>
 			<ul class="sub-menu"  <?php if(isset($menu)){if($menu == '6.41')echo "style='display: block;'"; }?>>
-				<!--6.41-->
-				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'marina_chillan_sol_pendie')echo "active"; }?> " data="6.41-marina_chillan_sol_pendie">
-					<a class="Marina_chillan" href="<?php echo base_url() ?>marina_chillan/contratos/solicitudes_pendientes"><i class="fa fa-user"></i> <span class="title"> Solicitudes Pendientes </span></a>
-				</li>
-				<!--6.41-->
+				
 				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'marina_chillan_sol_compl')echo "active"; }?> " data="6.41-marina_chillan_sol_compl">
 					<a class="Marina_chillan" href="<?php echo base_url() ?>marina_chillan/contratos/solicitudes_completas"><i class="fa fa-user"></i> <span class="title"> Solicitudes Completas </span></a>
 				</li>
