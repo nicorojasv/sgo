@@ -25,10 +25,10 @@ input[type=number] { -moz-appearance:textfield; }
        <input name="datepicker" type="text" id="datepickerAsistencia" style="border: 1px solid #ccc;" class="datepicker" value="<?php echo $fecha_mostrar ?>" size="10" readonly="true" title="Fecha a Gestionar Asistencia">
   </div>
   <div class="col-md-2">
-     <a href="<?php echo base_url() ?>wood/asistencia/listado_activo_personal" class="btn btn-col btn-primary">Listado de Personal</a>
+     <a href="<?php echo base_url() ?>carrera/asistencia/listado_activo_personal" class="btn btn-col btn-primary">Listado de Personal</a>
   </div>
     <div class="col-md-2" align="center">
-          <form action="<?php echo base_url() ?>wood/asistencia/exportar_excel_bono_anticipo" method="post" target="_blank" id="FormularioExportacionAsistencia">
+          <form action="<?php echo base_url() ?>carrera/asistencia/exportar_excel_bono_anticipo" method="post" target="_blank" id="FormularioExportacionAsistencia">
             <input title="EXPORTAR DATOS A ARCHIVO EXCEL" type="submit" class="botonExcelEnjoyAsistencia btn btn-info btn-block" value="Exportar"><br>
             <input type="hidden" id="datos_a_enviar" name="datos_a_enviar"/>
           </form>
@@ -48,7 +48,7 @@ input[type=number] { -moz-appearance:textfield; }
   $this->session->unset_userdata('exito');
 }
   ?>
-       <form action="<?php echo base_url() ?>wood/asistencia/guardar_asistencia" method="post" role="form" enctype="multipart/form-data"><br>
+       <form action="<?php echo base_url() ?>carrera/asistencia/guardar_asistencia" method="post" role="form" enctype="multipart/form-data"><br>
 
         <table id="exampleAsistencia" class="table">
             <thead style="background-color: #F2F2F2;">

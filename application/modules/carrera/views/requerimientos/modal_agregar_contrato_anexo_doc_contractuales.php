@@ -10,7 +10,7 @@
         <h4 class="modal-title" id="exampleModalLabel">Creando Contrato de Trabajo</h4>
       </div>
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimientos/guardar_nuevo_contrato_anexo_doc_contractual/<?php echo $usuario?>/<?php echo $tipo?>/<?php echo $asc_area?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimientos/guardar_nuevo_contrato_anexo_doc_contractual/<?php echo $usuario?>/<?php echo $tipo?>/<?php echo $asc_area?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <input type='hidden' name="datos_extras" id="datos_extras" value="SI"/> 
   <input type="hidden" name="fechaHoy" id="fechaHoy" value="<?php echo date('Y-m-d') ?>">
   <div id="modal_content">

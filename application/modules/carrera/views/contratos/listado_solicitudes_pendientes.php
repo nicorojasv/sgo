@@ -1,6 +1,6 @@
 <div class="panel panel-white">
   <div class="panel-body">
-    <form action="<?php echo base_url() ?>sanatorio/contratos/aprobacion_masiva_contrato_anexo_doc" method="post">
+    <form action="<?php echo base_url() ?>carrera/contratos/aprobacion_masiva_contrato_anexo_doc" method="post">
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-3">
@@ -11,9 +11,9 @@
             </div>
             <div class="col-md-8">
               <select class="form-control" onchange="location = this.value">
-                <option value="<?php echo base_url() ?>sanatorio/contratos/solicitudes_pendientes">[Todas]</option>
+                <option value="<?php echo base_url() ?>carrera/contratos/solicitudes_pendientes">[Todas]</option>
                 <?php foreach($listado_plantas as $ep){ ?>
-                <option value="<?php echo base_url() ?>sanatorio/contratos/solicitudes_pendientes/<?php echo $ep->id ?>" <?php if($planta_seleccionada == $ep->id) echo "selected" ?> ><?php echo $ep->nombre ?></option>
+                <option value="<?php echo base_url() ?>carrera/contratos/solicitudes_pendientes/<?php echo $ep->id ?>" <?php if($planta_seleccionada == $ep->id) echo "selected" ?> ><?php echo $ep->nombre ?></option>
                 <?php } ?>
               </select>
             </div> -->
@@ -77,16 +77,16 @@
                   <td>
                   <?php 
                    if(!isset($pedientes_baja)){?>
-                    <a href="<?php echo base_url() ?>sanatorio/contratos/aprobar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" title="Aprobar solicitud"><i class="fa fa-check" aria-hidden="true"></i></a>
-                    <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/contratos/modal_rechazar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-times" aria-hidden="true"></i></a>
+                    <a href="<?php echo base_url() ?>carrera/contratos/aprobar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" title="Aprobar solicitud"><i class="fa fa-check" aria-hidden="true"></i></a>
+                    <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_rechazar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-times" aria-hidden="true"></i></a>
                   <?php } 
                     if(isset($pedientes_baja)){ 
                   ?>
-                    <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>/bajar" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" style="color: red" aria-hidden="true"></i></a>
+                    <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>/bajar" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" style="color: red" aria-hidden="true"></i></a>
                   <?php 
                     }else{
                   ?>
-                    <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
                   <?php   
                     }
                   ?>

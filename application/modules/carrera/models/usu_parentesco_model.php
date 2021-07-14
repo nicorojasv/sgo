@@ -2,19 +2,19 @@
 class Usu_parentesco_model extends CI_Model {
 	
 	function __construct(){
-		$this->sanatorio = $this->load->database('sanatorio', TRUE);
+		$this->carrera = $this->load->database('carrera', TRUE);
 	}
 
 	function listar(){
-		$this->sanatorio->select('*');
-		$this->sanatorio->from('usu_parentesco');
-		$query = $this->sanatorio->get();
+		$this->carrera->select('*');
+		$this->carrera->from('usu_parentesco');
+		$query = $this->carrera->get();
 		return $query->result();
 	}
 
 	function get($id){
-		$this->sanatorio->where('id', $id);
-		$query = $this->sanatorio->get('usu_parentesco');
+		$this->carrera->where('id', $id);
+		$query = $this->carrera->get('usu_parentesco');
 		return $query->row();
 	}
 
@@ -25,9 +25,9 @@ class Usu_parentesco_model extends CI_Model {
 
 	
 	function editar($id,$data){
-		//$this->sanatorio->cache_delete_all();
-		$this->sanatorio->where('id', $id);
-		$this->sanatorio->update('usuarios', $data); 
+		//$this->carrera->cache_delete_all();
+		$this->carrera->where('id', $id);
+		$this->carrera->update('usuarios', $data); 
 	}
 
 	function ingresar($data){
@@ -36,8 +36,8 @@ class Usu_parentesco_model extends CI_Model {
 	}
 
 	function eliminar($id){
-		//$this->sanatorio->cache_delete_all();
-		$this->sanatorio->delete('usuarios', array('id' => $id)); 
+		//$this->carrera->cache_delete_all();
+		$this->carrera->delete('usuarios', array('id' => $id)); 
 	}
 
 }

@@ -14,7 +14,7 @@ input[type=number] { -moz-appearance:textfield; }
 </style>
 <div class="panel panel-white"> 
 
-       <form action="<?php echo base_url() ?>enjoy/asistencia/guardar_asistencia" method="post" role="form" enctype="multipart/form-data"><br>
+       <form action="<?php echo base_url() ?>carrera/asistencia/guardar_asistencia" method="post" role="form" enctype="multipart/form-data"><br>
        <label for="datepickerAsistencia">Mes A trabajar: </label>
        <input name="datepicker" type="text" id="datepickerAsistencia" style="border: 1px solid #ccc;" class="datepicker" value="<?php echo $fecha_mostrar ?>" size="10" readonly="true" title="Fecha a Gestionar Asistencia"/>
         <table id="exampleAsistencia" class="table">

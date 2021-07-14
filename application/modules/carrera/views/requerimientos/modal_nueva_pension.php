@@ -41,7 +41,7 @@
     var pension = $('#pension').val();
     $.ajax({
       type: "POST",
-      url:base_url+"sanatorio/requerimiento/buscar_detalles_pension/"+pension,
+      url:base_url+"carrera/requerimiento/buscar_detalles_pension/"+pension,
       contentType: "application/x-www-form-urlencoded",
       dataType: "json",
       success: function(data){
@@ -66,7 +66,7 @@
 </script>
 
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimiento/guardar_nueva_pension_requerimiento" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimiento/guardar_nueva_pension_requerimiento" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <div id="modal_content">
 		<div class="modal-header">
       <h5><u>Datos del Contrato y/o Anexo:</u></h5>

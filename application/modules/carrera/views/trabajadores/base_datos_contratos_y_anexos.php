@@ -3,11 +3,11 @@
   <div class="panel-body">
       <div class="row" style="padding-left: 10px; margin-bottom: 10px;">
         <div class="col-md-10" style="border: 1px solid #ccc; padding-bottom: 10px;">
-          <form action="<?php echo base_url() ?>sanatorio/trabajadores/contratos_y_anexos" method="post" id="FormularioGet">
+          <form action="<?php echo base_url() ?>carrera/trabajadores/contratos_y_anexos" method="post" id="FormularioGet">
           <label for="seleccion_planta"><h4>Planta: </h4></label>
             <select name="nombrePlantaSeleccionada" id="seleccion_planta">
             
-            <option value="todasLasPlantas"<?php if(isset($plantaSeleccionada)){if($plantaSeleccionada == 'todasLasPlantas'){echo "selected";}} ?> >sanatorio </option>
+            <option value="todasLasPlantas"<?php if(isset($plantaSeleccionada)){if($plantaSeleccionada == 'todasLasPlantas'){echo "selected";}} ?> >carrera </option>
 
             </select>
             <br><br>
@@ -42,7 +42,7 @@
         </div>
         <?php if(!empty($listado)){ ?>
         <div class="col-md-2" align="center">
-          <form action="<?php echo base_url() ?>sanatorio/trabajadores/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
+          <form action="<?php echo base_url() ?>carrera/trabajadores/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
             <input title="EXPORTAR DATOS A ARCHIVO EXCEL" type="submit" class="botonExcel btn btn-success btn-block" value="Exportar a Excel"><br>
             <input type="hidden" id="datos_a_enviar" name="datos_a_enviar"/>
           </form>

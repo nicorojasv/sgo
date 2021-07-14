@@ -64,7 +64,7 @@
 </style>
 <div class="panel panel-white">
   <div class="panel-body">
-    <form action="<?php echo base_url() ?>wood/contratos/aprobacion_masiva_contrato_anexo_doc" method="post" onsubmit="return bloqEnvioMasivo()">
+    <form action="<?php echo base_url() ?>carrera/contratos/aprobacion_masiva_contrato_anexo_doc" method="post" onsubmit="return bloqEnvioMasivo()">
       <div class="row">
         <div class="col-md-8"></div>
         <div class="col-md-4" id="btnql">
@@ -162,18 +162,18 @@
                   if($this->session->userdata('tipo_usuario') == 11 || $this->session->userdata('id') == 112 || $this->session->userdata('id') == 114 || $this->session->userdata('tipo_usuario') == 8  ){ // Admin RRHH & Super Admin DIOS
                    if(!isset($pedientes_baja)){
                 ?>
-                     <a href="<?php echo base_url() ?>wood/contratos/validar_contrato_anexo_doc/<?php echo $rm->id_req_usu_arch ?>" title="Aprobar solicitud" class=""><i class="fa fa-check" id="foo" aria-hidden="true"></i></a>-
-                     <a data-toggle="modal" href="<?php echo base_url() ?>wood/contratos/modal_rechazar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles" class="hvr-icon-spin"><i class="fa fa-times  hvr-icon" aria-hidden="true"></i></a>-
+                     <a href="<?php echo base_url() ?>carrera/contratos/validar_contrato_anexo_doc/<?php echo $rm->id_req_usu_arch ?>" title="Aprobar solicitud" class=""><i class="fa fa-check" id="foo" aria-hidden="true"></i></a>-
+                     <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_rechazar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles" class="hvr-icon-spin"><i class="fa fa-times  hvr-icon" aria-hidden="true"></i></a>-
                 <?php 
                     }
                   }
                   if(isset($pedientes_baja)){ 
                 ?>
-                  <a data-toggle="modal" href="<?php echo base_url() ?>wood/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>/bajar" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" style="color: red" aria-hidden="true"></i></a>
+                  <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>/bajar" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" style="color: red" aria-hidden="true"></i></a>
                 <?php 
                   }else{
                 ?>
-                  <a data-toggle="modal" href="<?php echo base_url() ?>wood/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search"  aria-hidden="true"></i></a>
+                  <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search"  aria-hidden="true"></i></a>
                 <?php 
                   }
                 ?>

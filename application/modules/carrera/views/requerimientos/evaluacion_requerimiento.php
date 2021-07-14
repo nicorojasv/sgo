@@ -59,11 +59,11 @@
                 else echo "No Contactado";
                 ?></b></td>
           <td style="text-align:center;">
-            <a class="sv-callback-list" data-usuario='<?php echo $l->usuario_id ?>' href="<?php echo base_url().'est/requerimiento/callback_view_documentos2/'.$l->usuario_id ?>/<?php echo $l->asc_trabajadores ?>" style="color:blue;">
+            <a class="sv-callback-list" data-usuario='<?php echo $l->usuario_id ?>' href="<?php echo base_url().'carrera/requerimiento/callback_view_documentos2/'.$l->usuario_id ?>/<?php echo $l->asc_trabajadores ?>" style="color:blue;">
               <i class="fa fa-book" ></i>
             </a>
           </td>
-          <td style="text-align:center;"><a class="sv-callback-list" href="<?php echo base_url() ?>est/requerimiento/modal_ingresar_evaluacion/<?php echo $l->usuario_id ?>/<?php echo $area_cargo_id ?>">Detalle Evaluacion</a></td>
+          <td style="text-align:center;"><a class="sv-callback-list" href="<?php echo base_url() ?>carrera/requerimiento/modal_ingresar_evaluacion/<?php echo $l->usuario_id ?>/<?php echo $area_cargo_id ?>">Detalle Evaluacion</a></td>
           <td style="text-align:center;" class="col-xs-1"><input type="text" class="form-control" value='<?php echo $l->calificacion_final ?>' disabled></td>
     		</tr>
         <?php } ?>

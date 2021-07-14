@@ -1,9 +1,9 @@
 <div class="panel panel-white">
 	<div class="panel-heading">
-		<h4 class="panel-title">A&ntilde;adir Evaluaci&oacute;n Medica <a href="<?php echo base_url() ?>sanatorio/trabajadores/detalle/<?php echo $id ?>"><i class="fa fa-reply"></i></a></h4>
+		<h4 class="panel-title">A&ntilde;adir Evaluaci&oacute;n Medica <a href="<?php echo base_url() ?>carrera/trabajadores/detalle/<?php echo $id ?>"><i class="fa fa-reply"></i></a></h4>
 	</div>
 	<div class="panel-body">
-		<form class="form-horizontal" id="agregar_examen" method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>sanatorio/trabajadores/guardar_creacion_eval/<?php echo $id ?>/<?php if($eval){ echo $eval->id; } ?>">
+		<form class="form-horizontal" id="agregar_examen" method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>carrera/trabajadores/guardar_creacion_eval/<?php echo $id ?>/<?php if($eval){ echo $eval->id; } ?>">
 		<input type="hidden" name="evaluacion" value="2">	
 			<div class="row">
 				<div class='col-md-6' >

@@ -4,9 +4,9 @@
 		<span class='badge' style='background-color:#D7DF01'>EP</span> En Proceso <span class='badge' style='background-color:green'>A</span> Aprobado <span class='badge' style='background-color:red'>R</span> Rechazado <span class='badge' style='background-color:#886A08'>NA</span> No Asiste <span class='badge' style='background-color:#000000'>NG</span> No Gestionado
 	</div>
 	<div class="panel-body">
-		<form action="<?php echo base_url() ?>sanatorio/trabajadores/solicitudes_revision_examenes" method="post">
+		<form action="<?php echo base_url() ?>carrera/trabajadores/solicitudes_revision_examenes" method="post">
 			<div class="col-md-8">
-				<a href="<?php echo base_url() ?>sanatorio/requerimiento/asignacion/<?php echo $id_requerimiento ?>"><i class="fa fa-reply"></i></a>
+				<a href="<?php echo base_url() ?>carrera/requerimiento/asignacion/<?php echo $id_requerimiento ?>"><i class="fa fa-reply"></i></a>
 				<h5><b>FECHA TERMINO: </b><?php echo $fecha_termino ?></h5>
 				<h5><?php echo '<b>FECHA SOLICITUD: </b>'.$fecha.' - <b>CENTRO DE COSTO: </b>'.$centro_costo.' - <b>PLANTA: </b>'.$planta ?></h5>
 			</div>
@@ -43,10 +43,10 @@
 								<?php echo ucwords(mb_strtolower($l->nombre, 'utf-8')); ?>
 							</td>
 							<td>
-								<a href="#" class="dob" data-type="combodate" data-name="fecha" data-value="<?php echo $l->fecha; ?>" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="<?php echo $l->id ?>" data-url="<?php echo base_url() ?>sanatorio/requerimiento/guardar_fecha"  data-original-title="Fecha de Ingreso"></a>
+								<a href="#" class="dob" data-type="combodate" data-name="fecha" data-value="<?php echo $l->fecha; ?>" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="<?php echo $l->id ?>" data-url="<?php echo base_url() ?>carrera/requerimiento/guardar_fecha"  data-original-title="Fecha de Ingreso"></a>
 							</td>
 							<td class="center">
-								<a href="#" class="opcion_referido" data-type="select" data-name="referido" data-pk="<?php echo $l->id ?>" data-value="" data-url="<?php echo base_url() ?>sanatorio/requerimiento/guardar_fecha" data-original-title="Select sex">
+								<a href="#" class="opcion_referido" data-type="select" data-name="referido" data-pk="<?php echo $l->id ?>" data-value="" data-url="<?php echo base_url() ?>carrera/requerimiento/guardar_fecha" data-original-title="Select sex">
 									<?php echo ($l->referido)? 'Si':'No'; ?>
 								</a>
 							</td>
@@ -77,18 +77,18 @@
 								<?php echo $l->badge_psicol ?>
 							</td>
 							<td class="center">
-								<a class="sv-callback-list" data-usuario='<?php echo $l->usuario_id ?>' href="<?php echo base_url().'sanatorio/requerimiento/callback_view_documentos_general/'.$l->usuario_id ?>/<?php echo $l->id ?>/<?php echo $id_requerimiento ?>" style="color:blue;">
+								<a class="sv-callback-list" data-usuario='<?php echo $l->usuario_id ?>' href="<?php echo base_url().'carrera/requerimiento/callback_view_documentos_general/'.$l->usuario_id ?>/<?php echo $l->id ?>/<?php echo $id_requerimiento ?>" style="color:blue;">
 									<i class="fa fa-book" ></i>
 								</a>
 							</td>
 							<td class="center">
-								<a href="<?php echo base_url().'sanatorio/requerimiento/contratos_req_trabajador/'.$l->usuario_id ?>/<?php echo $l->id ?>/<?php echo $l->requerimiento_area_cargo_id ?>" style="color:blue;" target="_blank">
+								<a href="<?php echo base_url().'carrera/requerimiento/contratos_req_trabajador/'.$l->usuario_id ?>/<?php echo $l->id ?>/<?php echo $l->requerimiento_area_cargo_id ?>" style="color:blue;" target="_blank">
 									<i class="fa fa-book" ></i>
 									<?php echo $l->cantidad_contratos_realizados_generados."/".$l->cantidad_contratos_realizados ?>
 								</a>
 							</td>
 							<td class="center">
-								<a href="#" class="opcion_status" data-type="select" data-name="status" data-pk="<?php echo $l->id ?>" data-value="" data-url="<?php echo base_url() ?>sanatorio/requerimiento/guardar_fecha" data-original-title="Seleccione Estado">
+								<a href="#" class="opcion_status" data-type="select" data-name="status" data-pk="<?php echo $l->id ?>" data-value="" data-url="<?php echo base_url() ?>carrera/requerimiento/guardar_fecha" data-original-title="Seleccione Estado">
 									<?php 
 									if ($l->status){
 										//if($l->status == 1) echo "No Disponible";
@@ -104,16 +104,16 @@
 								</a>
 							</td>
 							<td>
-								<a href="#" class="opcion_jefe_area" data-type="text" data-name="jefe_area" data-pk="<?php echo $l->id ?>" data-value="" data-url="<?php echo base_url() ?>sanatorio/requerimiento/guardar_fecha" data-original-title="Jefe de Area">
+								<a href="#" class="opcion_jefe_area" data-type="text" data-name="jefe_area" data-pk="<?php echo $l->id ?>" data-value="" data-url="<?php echo base_url() ?>carrera/requerimiento/guardar_fecha" data-original-title="Jefe de Area">
 								<?php echo $l->jefe_area ?></a>
 							</td>
 							<td>
-								<a href="#" class="comments" data-type="text" data-pk="<?php echo $l->id ?>" data-name="comentario" data-url="<?php echo base_url() ?>sanatorio/requerimiento/guardar_fecha" data-placeholder="Agregar comentario..." data-original-title="Comenta">
+								<a href="#" class="comments" data-type="text" data-pk="<?php echo $l->id ?>" data-name="comentario" data-url="<?php echo base_url() ?>carrera/requerimiento/guardar_fecha" data-placeholder="Agregar comentario..." data-original-title="Comenta">
 									<?php echo ($l->comentario)? $l->comentario : ''; ?>
 								</a>
 							</td>
 							<td class="center">
-								<a class='eliminar' href="<?php echo base_url() ?>sanatorio/requerimiento/eliminar_usuarios_general_req/<?php echo $l->id ?>/<?php echo $id_requerimiento ?>"><i class="fa fa-trash-o"></i></a>
+								<a class='eliminar' href="<?php echo base_url() ?>carrera/requerimiento/eliminar_usuarios_general_req/<?php echo $l->id ?>/<?php echo $id_requerimiento ?>"><i class="fa fa-trash-o"></i></a>
 							</td>
 						</tr>
 					<?php } ?>

@@ -12,7 +12,7 @@
 <div class="panel panel-white">
   <div class="panel-body">
       <div class="row">
-         <form action="<?php echo base_url() ?>sanatorio/contratos/aprobacion_masiva_anexos" method="post">
+         <form action="<?php echo base_url() ?>carrera/contratos/aprobacion_masiva_anexos" method="post">
           <div class="row">
               <div class="col-md-2"></div>
               <div class="col-md-3">
@@ -55,11 +55,11 @@
                     <td><?php  echo $rm->causalTrabajador ?></td>
                     <td><?php echo $rm->centroTrabajador ?></td>
                     <td>
-                        <a href="<?php echo base_url()?>sanatorio/contratos/aprobar_anexo/<?php echo $rm->idAnexo; ?>" title="Aprobar"><i style="color: green;" class="fa fa-check-circle" aria-hidden="true"></i></a> 
+                        <a href="<?php echo base_url()?>carrera/contratos/aprobar_anexo/<?php echo $rm->idAnexo; ?>" title="Aprobar"><i style="color: green;" class="fa fa-check-circle" aria-hidden="true"></i></a> 
                           |
                         <a onclick="rechazar(this)" data-nombre="<?php echo $rm->nombreTrabajador?>" data-id="<?php echo $rm->idAnexo ?>" title="Rechazar"><i style="color: red; cursor: pointer;" class="fa fa-times-circle" aria-hidden="true"></i></a>
                           |
-                        <a href="<?php echo base_url()?>sanatorio/contratos/descargar_anexo/<?php echo $rm->idAnexo; ?>" title="Descargar"><i style="color: blue;" class="fa fa-download" aria-hidden="true"></i></a>
+                        <a href="<?php echo base_url()?>carrera/contratos/descargar_anexo/<?php echo $rm->idAnexo; ?>" title="Descargar"><i style="color: blue;" class="fa fa-download" aria-hidden="true"></i></a>
                     </td>
                   </tr>
                   <?php  $i++; } ?>
@@ -130,7 +130,7 @@
                 $('#content').html("<div class='loading'><img src='"+base_url+"extras/img/loader2.gif' alt='loading' /><br/>Un momento, por favor...</div>");
                     $.ajax({
                        type: "POST",
-                      url: base_url+"sanatorio/contratos/rechazar_anexo/"+id,
+                      url: base_url+"carrera/contratos/rechazar_anexo/"+id,
                       data: {'id':id,'value':value},
                       dataType: "json",
                     }).done(function ( data ) { 

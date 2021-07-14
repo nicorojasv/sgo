@@ -4,7 +4,7 @@
     <h4 class="modal-title" id="exampleModalLabel" align="center">Agendar Examen <?php echo $tipo_examen ?></h4>
   </div>
   <div id="modal_content">
-    <form action="<?php echo base_url() ?>sanatorio/trabajadores/ingresar_agenda_de_examen" method='post'>
+    <form action="<?php echo base_url() ?>carrera/trabajadores/ingresar_agenda_de_examen" method='post'>
       <br>
       <input type='hidden' value="<?php echo $id_solicitud ?>" name="id_solicitud" id="id_solicitud"/>
       <input type='hidden' value="<?php echo $id_tipo_examen ?>" name="id_tipo_examen" id="id_tipo_examen"/>

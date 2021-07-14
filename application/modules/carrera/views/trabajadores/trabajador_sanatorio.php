@@ -34,7 +34,7 @@
 			<div class="tab-content">
 				<div class="tab-pane fade in active" id="datos-personales">
 					<h2>Datos Personales</h2>
-					<form role="form" class="form-horizontal" action="<?php echo  base_url() ?>sanatorio/trabajadores/guardar_personales" method="post" >
+					<form role="form" class="form-horizontal" action="<?php echo  base_url() ?>carrera/trabajadores/guardar_personales" method="post" >
 						<input type="hidden" name="id" value="<?php echo $id_usuario ?>" >
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="rut">
@@ -230,7 +230,7 @@
 				</div>
 				<div class="tab-pane fade" id="contacto-emergencia" >
 					<h2>Contacto de Emergencia</h2>
-					<form role="form" class="form-horizontal" action="<?php echo  base_url() ?>sanatorio/trabajadores/guardar_datos_de_emergencia/<?php echo $id_usuario ?>" method="post" >
+					<form role="form" class="form-horizontal" action="<?php echo  base_url() ?>carrera/trabajadores/guardar_datos_de_emergencia/<?php echo $id_usuario ?>" method="post" >
 						<input type="hidden" name="id" value="<?php echo $id_usuario ?>" >
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="nombres_emergencia">
@@ -276,7 +276,7 @@
 				
 				<div class="tab-pane fade" id="datos-extras">
 					<h2>Datos Extras</h2>
-					<form role="form" class="form-horizontal" action="<?php echo  base_url() ?>sanatorio/trabajadores/guardar_extra" method="post" >
+					<form role="form" class="form-horizontal" action="<?php echo  base_url() ?>carrera/trabajadores/guardar_extra" method="post" >
 						<input type="hidden" name="id" value="<?php echo $id_usuario ?>" >
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="select_bancos">
@@ -374,7 +374,7 @@
 						</div>
 					</form>
 					<h2>Subir un archivo al sistema</h2>
-					<form enctype="multipart/form-data" action="<?php echo  base_url() ?>sanatorio/trabajadores/guardar_archivo/<?php echo $id_usuario ?>" method="post" class="form-horizontal" >
+					<form enctype="multipart/form-data" action="<?php echo  base_url() ?>carrera/trabajadores/guardar_archivo/<?php echo $id_usuario ?>" method="post" class="form-horizontal" >
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="select_archivo">
 								Tipo de archivo
@@ -417,7 +417,7 @@
 								<td>
 									<a title="Descargar" href='<?php echo base_url().$a->url ?>' target='_blank'><i class="fa fa-download"></i></a> 
 									&nbsp;&nbsp;
-									<a title="Eliminar" class="eliminar" href="<?php echo base_url() ?>sanatorio/trabajadores/eliminar_archivo/<?php echo $a->id_archivo ?>/<?php echo $id_usuario ?>"><i class="fa fa-trash-o"></i></a> 
+									<a title="Eliminar" class="eliminar" href="<?php echo base_url() ?>carrera/trabajadores/eliminar_archivo/<?php echo $a->id_archivo ?>/<?php echo $id_usuario ?>"><i class="fa fa-trash-o"></i></a> 
 								</td>
 							</tr>
 						<?php } ?>
@@ -433,7 +433,7 @@
 					<h3>Listado de Examenes de <b><?php echo ucwords(mb_strtolower($nombre,'UTF-8')); ?></b></h3>
 					
 					
-					<a class="btn btn-blue pull-right" style="margin-left:10px;" href="<?php echo base_url() ?>sanatorio/trabajadores/crear_examen/<?php echo $id ?>">Nuevo Examen</a>
+					<a class="btn btn-blue pull-right" style="margin-left:10px;" href="<?php echo base_url() ?>carrera/trabajadores/crear_examen/<?php echo $id ?>">Nuevo Examen</a>
 					
 					<table class='table'>
 						<thead>
@@ -484,13 +484,13 @@
 											if($this->session->userdata('id') == 39 || $this->session->userdata('tipo_usuario')==8 || $this->session->userdata('id') == 99 || $this->session->userdata('id') == 10){
 										?>
 										<div class="visible-md visible-lg hidden-sm hidden-xs">
-											<a href="<?php echo base_url() ?>sanatorio/trabajadores/eliminar_examen/<?php echo $id ?>/<?php echo $l->id ?>" class="btn btn-xs btn-red tooltips eliminar" data-id="<?php echo $l->id ?>" data-placement="top" data-original-title="Eliminar"><i class="fa fa-times fa fa-white"></i></a>
+											<a href="<?php echo base_url() ?>carrera/trabajadores/eliminar_examen/<?php echo $id ?>/<?php echo $l->id ?>" class="btn btn-xs btn-red tooltips eliminar" data-id="<?php echo $l->id ?>" data-placement="top" data-original-title="Eliminar"><i class="fa fa-times fa fa-white"></i></a>
 											<?php if($l->id_tipo == 1){ ?>
-                  							<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/trabajadores/modal_editar_desempeno/<?php echo $l->id ?>/<?php echo $id ?>" class="btn btn-xs btn-blue pull-right editar" data-target="#ModalEditar"><i class="fa fa-edit"></i></a>
+                  							<a data-toggle="modal" href="<?php echo base_url() ?>carrera/trabajadores/modal_editar_desempeno/<?php echo $l->id ?>/<?php echo $id ?>" class="btn btn-xs btn-blue pull-right editar" data-target="#ModalEditar"><i class="fa fa-edit"></i></a>
 											<?php }elseif($l->id_tipo == 3){ ?>
-                  							<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/trabajadores/modal_editar_conocimiento/<?php echo $l->id ?>/<?php echo $id ?>" class="btn btn-xs btn-blue pull-right editar" data-target="#ModalEditar"><i class="fa fa-edit"></i></a>
+                  							<a data-toggle="modal" href="<?php echo base_url() ?>carrera/trabajadores/modal_editar_conocimiento/<?php echo $l->id ?>/<?php echo $id ?>" class="btn btn-xs btn-blue pull-right editar" data-target="#ModalEditar"><i class="fa fa-edit"></i></a>
 											<?php }else{ ?>
-											<a href="<?php echo ($l->id_tipo == 4)? base_url().'sanatorio/trabajadores/crear_masso/'.$id.'/'.$l->id : base_url().'sanatorio/trabajadores/crear_examen/'.$id.'/'.$l->id; ?>" class="btn btn-xs btn-blue pull-right editar" data-original-title="Editar"><i class="fa fa-edit"></i></a>
+											<a href="<?php echo ($l->id_tipo == 4)? base_url().'carrera/trabajadores/crear_masso/'.$id.'/'.$l->id : base_url().'carrera/trabajadores/crear_examen/'.$id.'/'.$l->id; ?>" class="btn btn-xs btn-blue pull-right editar" data-original-title="Editar"><i class="fa fa-edit"></i></a>
 											<?php } ?>
 										</div>
 									<?php } ?>
@@ -529,7 +529,7 @@
         <h2 class="modal-title" id="myModalLabel">Registro de Nuevo Examen de Desempeño</h2>
       </div>
       <div class="modal-body">
-        <form action="<?php echo base_url() ?>sanatorio/trabajadores/guardar_exam_desempeno" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+        <form action="<?php echo base_url() ?>carrera/trabajadores/guardar_exam_desempeno" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
           <div class="col-md-6">
             <div class="control-group">
             	<label class="control-label" for="id_tipo_eval">Tipo de Examen de Desempeño</label>
@@ -655,7 +655,7 @@
         <h2 class="modal-title" id="myModalLabel">Registro de Nuevo Examen de Conocimiento</h2>
       </div>
       <div class="modal-body">
-        <form action="<?php echo base_url() ?>sanatorio/trabajadores/guardar_exam_conocimientos" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+        <form action="<?php echo base_url() ?>carrera/trabajadores/guardar_exam_conocimientos" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
           <div class="col-md-6">
             <div class="control-group">
             	<label class="control-label" for="id_tipo_eval">Tipo de Examen de Conocimiento</label>
@@ -786,7 +786,7 @@
           <h5>Instrucciones:</h5>
           <p>* Todos los campos sus obligatorios.</p>
         </div>
-        <form action="<?php echo base_url() ?>sanatorio/trabajadores/guardar_experiencia" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+        <form action="<?php echo base_url() ?>carrera/trabajadores/guardar_experiencia" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
           <div class="col-md-6">
             <div class="control-group">
               <label class="control-label" for="desde">Desde</label>

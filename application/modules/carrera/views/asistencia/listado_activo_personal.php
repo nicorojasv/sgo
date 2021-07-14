@@ -13,17 +13,17 @@
 		<?php 
 			if ($volverBono) {
 		?>
-			<a href="<?php echo base_url() ?>sanatorio/asistencia/bonos"  class="btn  btn-row btn-default">volver</a>
+			<a href="<?php echo base_url() ?>carrera/asistencia/bonos"  class="btn  btn-row btn-default">volver</a>
 
 		<?php 
 			}else{
 		?>
-				<a href="<?php echo base_url() ?>sanatorio/asistencia"  class="btn  btn-row btn-default">volver</a>
+				<a href="<?php echo base_url() ?>carrera/asistencia"  class="btn  btn-row btn-default">volver</a>
 		<?php 
 			}
 		?>
 </div>
-	<form action="<?php echo base_url() ?>sanatorio/asistencia/guardar_estado_asistencia" method="post" role="form" enctype="multipart/form-data">
+	<form action="<?php echo base_url() ?>carrera/asistencia/guardar_estado_asistencia" method="post" role="form" enctype="multipart/form-data">
 	<table id="exampleListadoAsistencia" class="table " border="0">
 
             <thead >

@@ -46,7 +46,7 @@ background: #716f6f;
              if (this.value == 1) {//si hay que verificar el examen preocupacion
                 $.ajax({
                       type:"POST",
-                      url: base_url+"sanatorio/requerimientos/verificarExamenPreocupacional/"+idPersona,
+                      url: base_url+"carrera/requerimientos/verificarExamenPreocupacional/"+idPersona,
                       data:idPersona,
                       dataType: "json",
                       success:function(data){
@@ -83,7 +83,7 @@ background: #716f6f;
              if (this.value == 2) {//si hay que verificar charla masso
                  $.ajax({
                       type:"POST",
-                      url: base_url+"sanatorio/requerimientos/verificarCharlaMasso/"+idPersona,
+                      url: base_url+"carrera/requerimientos/verificarCharlaMasso/"+idPersona,
                       data:idPersona,
                       dataType: "json",
                       success:function(data){
@@ -159,7 +159,7 @@ background: #716f6f;
       </div>
 
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimientos/guardar_anexo/<?php echo $usuario?>/<?php echo $tipo?>/<?php echo $asc_area?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimientos/guardar_anexo/<?php echo $usuario?>/<?php echo $tipo?>/<?php echo $asc_area?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <input type='hidden' name="datos_extras" id="datos_extras" value="SI"/> 
   <input type="hidden" name="fechaHoy" id="fechaHoy" value="<?php echo date('Y-m-d') ?>">
                  

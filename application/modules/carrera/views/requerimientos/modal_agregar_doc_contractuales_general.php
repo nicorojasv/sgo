@@ -9,7 +9,7 @@ document.getElementById("resultado").value = diffDays;
 }
 </script>
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimiento/guardar_doc_contractual_general/<?php echo $usuario?>/<?php echo $tipo?>/<?php echo $asc_area?>/<?php echo $id_req ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimiento/guardar_doc_contractual_general/<?php echo $usuario?>/<?php echo $tipo?>/<?php echo $asc_area?>/<?php echo $id_req ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
     <input type='hidden' name="datos_extras" id="datos_extras" value="SI"/>
     <div id="modal_content">
       <div class="row">

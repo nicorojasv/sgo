@@ -10,15 +10,15 @@
           </div>
           <div class="col-md-10">
             <select class="form-control" onchange="location = this.value">
-              <option value="<?php echo base_url() ?>est/contratos/solicitudes_completas">[Todas]</option>
+              <option value="<?php echo base_url() ?>carrera/contratos/solicitudes_completas">[Todas]</option>
               <?php foreach($listado_plantas as $ep){ ?>
-              <option value="<?php echo base_url() ?>est/contratos/solicitudes_completas/<?php echo $ep->id ?>" <?php if($planta_seleccionada == $ep->id) echo "selected" ?> ><?php echo $ep->nombre ?></option>
+              <option value="<?php echo base_url() ?>carrera/contratos/solicitudes_completas/<?php echo $ep->id ?>" <?php if($planta_seleccionada == $ep->id) echo "selected" ?> ><?php echo $ep->nombre ?></option>
               <?php } ?>
             </select>
           </div>
                     <div class="col-md-8" align="left">
               <label for="datepickerAraucoSCompletas">Mes A Consultar: </label>
-              <input name="datepicker" type="text" id="datepickerAraucoSCompletas" style="border: 1px solid #ccc;" class="datepicker" value="<?php if(isset($mes)) echo $mes ?>" size="10" readonly="true" title="Fecha a Gestionar Asistencia"><br>
+              <input name="datepicker" type="text" id="datepickerAraucoSCompletas" style="border: 1px solid #ccc;" class="datepicker" value="<?php if(isset($mes)) echo $mes ?>" size="10" readonly="true" title="Fecha a Gcarreraionar Asistencia"><br>
               <input style="cursor: pointer;"  type="radio" id="historico" name="historico" value="historico"<?php if($mes == 'historico')echo "checked" ?>  onclick="historico()" >
       <label for="historico" style="cursor: pointer;" >Historico</label>
           </div>
@@ -28,7 +28,7 @@
       <div class="col-md-3"></div>
       
       <div class="col-md-3" align="center">
-            <form action="<?php echo base_url() ?>est/contratos/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
+            <form action="<?php echo base_url() ?>carrera/contratos/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
               <input title="EXPORTAR DATOS A ARCHIVO EXCEL" type="image" src="<?php echo base_url() ?>extras/imagenes/Excel-Export.jpg" class="botonExcelArauco " value="Exportar a Excel"><br>
               <input type="hidden" id="datos_a_enviar" name="datos_a_enviar"/>
             </form>
@@ -80,7 +80,7 @@
                 <td><?php echo $rm->renta_imponible ?></td>
                 <?php if (!isset($completa_baja)) { ?>
                 <td>
-                  <a data-toggle="modal" href="<?php echo base_url() ?>est/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
                   <?php 
                     if($this->session->userdata('tipo_usuario') == 2 || 
                        $this->session->userdata('tipo_usuario') == 4 ||  
@@ -130,8 +130,8 @@
         <th>Sueldo Base Palabras</th>
         <th>Bono Responsabilidad</th>
         <th>Bono Responsabilidad Palabras</th>
-        <th>Bono Gestion</th>
-        <th>Bono Gestion Palabras</th>
+        <th>Bono Gcarreraion</th>
+        <th>Bono Gcarreraion Palabras</th>
         <th>Bono Confianza</th>
         <th>Bono Confianza Palabras</th>
         <th>Asig. Movilizacion</th>
@@ -173,7 +173,7 @@
           <td><?php echo $rm->rut ?></td>
           <td><?php echo $rm->nacionalidad ?></td>
           <td><?php echo $rm->fecha_nacimiento_texto_largo ?></td>
-          <td><?php echo $rm->estado_civil ?></td>
+          <td><?php echo $rm->carreraado_civil ?></td>
           <td><?php echo $rm->domicilio ?></td>
           <td><?php echo $rm->ciudad ?></td>
           <td><?php echo $rm->cargo ?></td>
@@ -181,8 +181,8 @@
           <td><?php echo num2letras($rm->renta_imponible) ?></td>
           <td><?php echo $rm->bono_responsabilidad ?></td>
           <td><?php echo num2letras($rm->bono_responsabilidad) ?></td>
-          <td><?php echo $rm->bono_gestion ?></td>
-          <td><?php echo num2letras($rm->bono_gestion) ?></td>
+          <td><?php echo $rm->bono_gcarreraion ?></td>
+          <td><?php echo num2letras($rm->bono_gcarreraion) ?></td>
           <td><?php echo $rm->bono_confianza ?></td>
           <td><?php echo num2letras($rm->bono_confianza) ?></td>
           <td><?php echo $rm->asignacion_movilizacion ?></td>
@@ -207,7 +207,7 @@
           <td><?php echo $rm->nombre_centro_costo ?></td>
           <td><?php echo $rm->codigo_centro_costo ?></td>
           <td><?php echo $rm->area ?></td>
-          <td><?php echo $rm->nivel_estudios ?></td>
+          <td><?php echo $rm->nivel_carreraudios ?></td>
           <td><?php echo $rm->nombre_planta ?></td>
           <td><?php echo $rm->nombre_banco ?></td>
           <td><?php echo $rm->tipo_cuenta ?></td>
@@ -227,10 +227,10 @@
               var nombre = $(this).attr('data-nombre');
               var idQuitar = $(this).attr('data-quitar');
                 alertify.prompt('Baja de Contrato',"Contrato de "+nombre+".<br><br>Especifique motivo de solicitud de baja.", "",
-                  function(evt, value ){// si presiona ok hacer esto
+                  function(evt, value ){// si presiona ok hacer carrerao
                     $.ajax({
                         type: "POST",
-                        url: base_url+"est/contratos/solicitud_bajar_contrato/"+service,
+                        url: base_url+"carrera/contratos/solicitud_bajar_contrato/"+service,
                         data: {service: service, value: value},
                         dataType: "json",
                         success: function(data) {    
@@ -240,12 +240,12 @@
                                 $(this).remove();
                               }
                           }else{
-                            alertify.error('Ops , no es posible en estos momentos');
+                            alertify.error('Ops , no es posible en carreraos momentos');
                           }
                         }
                     });
                   },
-                  function(){// si presiona cancelar hacer esto
+                  function(){// si presiona cancelar hacer carrerao
                     alertify.error('Cancelado');
                   }).set('labels', {ok:'Enviar', cancel:'cancelar'});     
           });

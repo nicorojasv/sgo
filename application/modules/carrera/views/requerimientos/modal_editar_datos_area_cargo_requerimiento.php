@@ -8,7 +8,7 @@
       <h5>Instrucciones:</h5>
       <p>* Todos los campos sus obligatorios.</p>
     </div><br>
-    <form action="<?php echo base_url() ?>sanatorio/requerimientos/actualizar_area_cargo_requerimiento" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data" autocomplete="off">
+    <form action="<?php echo base_url() ?>carrera/requerimientos/actualizar_area_cargo_requerimiento" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data" autocomplete="off">
       <?php
         if ($datos_area_cargo_req != FALSE){
         foreach ($datos_area_cargo_req as $row){

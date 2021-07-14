@@ -1,6 +1,6 @@
 
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimientos/subir_anexo/<?php echo $datosAnexo->id ?>/<?php echo  $datosAnexo->id_requerimiento_area_cargo ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimientos/subir_anexo/<?php echo $datosAnexo->id ?>/<?php echo  $datosAnexo->id_requerimiento_area_cargo ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <input type='hidden' name="datos_extras" id="datos_extras" value="SI"/> 
   <input type="hidden" name="fechaHoy" id="fechaHoy" value="<?php echo date('Y-m-d') ?>">
           <div class="clearfix"></div>

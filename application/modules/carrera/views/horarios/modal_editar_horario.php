@@ -1,6 +1,6 @@
 <div id="modal">
   <div id="modal_content">
-    <form action="<?php echo base_url() ?>sanatorio/horarios/actualizar_horario" method='post'>
+    <form action="<?php echo base_url() ?>carrera/horarios/actualizar_horario" method='post'>
       <?php
       if ($datos_horario != FALSE){
         foreach ($datos_horario as $row){

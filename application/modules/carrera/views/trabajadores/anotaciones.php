@@ -43,19 +43,19 @@
 				<?php foreach ($listado as $l) { ?>
 					<tr>
 						<td style="text-align:center">
-							<a href="#" id="tipo<?php echo $l->id ?>" class="editable" data-name="tipo" data-type="select" data-pk="<?php echo $l->id ?>" data-url="<?php echo base_url() ?>sanatorio/trabajadores/editar_anotaciones" data-original-title="Seleccione tipo" data-placement="right"><?php echo $l->tipo; ?></a>
+							<a href="#" id="tipo<?php echo $l->id ?>" class="editable" data-name="tipo" data-type="select" data-pk="<?php echo $l->id ?>" data-url="<?php echo base_url() ?>carrera/trabajadores/editar_anotaciones" data-original-title="Seleccione tipo" data-placement="right"><?php echo $l->tipo; ?></a>
 						</td>
 						<td class="center">
-							<a href="#" id="vacation" data-name="fecha" data-type="date" data-viewformat="yyyy-mm-dd" data-pk="<?php echo $l->id ?>" data-placement="right" data-original-title="Fecha de la anotación" class="editable" data-url="<?php echo base_url() ?>sanatorio/trabajadores/editar_anotaciones"><?php echo $l->fecha; ?></a>
+							<a href="#" id="vacation" data-name="fecha" data-type="date" data-viewformat="yyyy-mm-dd" data-pk="<?php echo $l->id ?>" data-placement="right" data-original-title="Fecha de la anotación" class="editable" data-url="<?php echo base_url() ?>carrera/trabajadores/editar_anotaciones"><?php echo $l->fecha; ?></a>
 						</td>
 						<td class="center">
-							<a href="#" data-type="textarea" data-name="anotacion" data-pk="<?php echo $l->id ?>" data-original-title="Detalle la anotación" class="editable" data-url="<?php echo base_url() ?>sanatorio/trabajadores/editar_anotaciones">
+							<a href="#" data-type="textarea" data-name="anotacion" data-pk="<?php echo $l->id ?>" data-original-title="Detalle la anotación" class="editable" data-url="<?php echo base_url() ?>carrera/trabajadores/editar_anotaciones">
 								<?php echo $l->anotacion; ?>
 							</a>
 						</td>
 						
 						<!--<td class="center">
-								<a class="eliminar" href="<?php //echo base_url() ?>sanatorio/trabajadores/eliminar_anotacion/<?php // echo $usuario->id ?>/<?php //echo $l->lista_id; ?>"><i class="fa fa-trash-o"></i></a>
+								<a class="eliminar" href="<?php //echo base_url() ?>carrera/trabajadores/eliminar_anotacion/<?php // echo $usuario->id ?>/<?php //echo $l->lista_id; ?>"><i class="fa fa-trash-o"></i></a>
 						
 						</td>-->
 					</tr>
@@ -85,7 +85,7 @@
 <div id="sv-listado" class="no-display">
 	<div class="col-md-12">
 		<br />
-		<form class="form-horizontal" method="post" role="form" action="<?php echo base_url() ?>sanatorio/trabajadores/guardar_anotacion/<?php echo $usuario->id; ?>" enctype="multipart/form-data">
+		<form class="form-horizontal" method="post" role="form" action="<?php echo base_url() ?>carrera/trabajadores/guardar_anotacion/<?php echo $usuario->id; ?>" enctype="multipart/form-data">
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="inputTipo">Tipo</label>
 				<div class="col-sm-9">

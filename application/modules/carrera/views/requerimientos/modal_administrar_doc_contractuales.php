@@ -1,6 +1,6 @@
 
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimientos/actualizar_doc_contractual/<?php echo $id_req_usu_arch?>/<?php echo $id_area_req ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimientos/actualizar_doc_contractual/<?php echo $id_req_usu_arch?>/<?php echo $id_area_req ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <div id="modal_content">
     <div class="row">
         <div class="col-md-6  col-sd-6">

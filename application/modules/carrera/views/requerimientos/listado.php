@@ -15,11 +15,11 @@
 		<div class="col-md-5">
 		</div>
 		<div class="col-md-2">
-			<a href="<?php echo  base_url() ?>sanatorio/requerimientos/agregar" class="btn btn-blue btn-block" target="_blank">Agregar</a>
+			<a href="<?php echo  base_url() ?>carrera/requerimientos/agregar" class="btn btn-blue btn-block" target="_blank">Agregar</a>
 		</div>
 		<br><br><br>
 		<?php if( count($listado) > 0){ ?>
-  		<form action="<?php echo base_url() ?>sanatorio/requerimientos/cambiar_estados_requerimientos" method='post'>
+  		<form action="<?php echo base_url() ?>carrera/requerimientos/cambiar_estados_requerimientos" method='post'>
 			<table id="example1">
 				<thead>
 					<tr>
@@ -57,14 +57,14 @@
 		                    <input type="checkbox" name="check_estado[]" value="<?php echo $r->id ?>" <?php echo ($r->estado)?"checked='checked'":""; ?> > <?php echo ($r->estado)?"<span class='badge' style='background-color:#3E9610'>A</span>":"<span class='badge' style='background-color:#DAAA08'>I</span>"; ?>
 		                </td>
 						<td style="width:47px; text-align:center">
-							<a title="Asignar Areas-Cargos al Requerimiento" href="<?php echo base_url() ?>sanatorio/requerimientos/asignacion/<?php echo $r->id ?>"><i class="fa fa-cogs" aria-hidden="true"></i></a>
-							<a title="Editar datos Requerimiento" data-target="#ModalEditar" data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/editar_requerimiento/<?php echo $r->id ?>"><i class="fa fa-pencil fa-fw"></i></a>
+							<a title="Asignar Areas-Cargos al Requerimiento" href="<?php echo base_url() ?>carrera/requerimientos/asignacion/<?php echo $r->id ?>"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+							<a title="Editar datos Requerimiento" data-target="#ModalEditar" data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/editar_requerimiento/<?php echo $r->id ?>"><i class="fa fa-pencil fa-fw"></i></a>
 							<!--
-							<a title="Eliminar Requerimiento" class="eliminar" href="<?php echo base_url() ?>sanatorio/requerimientos/eliminar/<?php echo $r->id ?>"><i class="fa fa-trash-o"></i></a>
+							<a title="Eliminar Requerimiento" class="eliminar" href="<?php echo base_url() ?>carrera/requerimientos/eliminar/<?php echo $r->id ?>"><i class="fa fa-trash-o"></i></a>
 
 							-->
 						
-							<a href="<?php echo base_url() ?>sanatorio/requerimientos/descargar_puesta_disposicion/<?php echo $r->id ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+							<a href="<?php echo base_url() ?>carrera/requerimientos/descargar_puesta_disposicion/<?php echo $r->id ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
 						
 						</td>
 					</tr>

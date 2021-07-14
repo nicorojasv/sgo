@@ -33,7 +33,7 @@
 			<div class="tab-content">
 				<div class="tab-pane fade in active" id="datos-personales">
 					<h2>Datos Personales</h2>
-					<form id="app"   @submit="checkForm" class="form-horizontal" action="<?php echo base_url()?>sanatorio/trabajadores/guardar_nuevo_trabajador" method="post" >
+					<form id="app"   @submit="checkForm" class="form-horizontal" action="<?php echo base_url()?>carrera/trabajadores/guardar_nuevo_trabajador" method="post" >
 
 						<div class="form-group">
 							<label class="col-sm-2 control-label" for="rut">

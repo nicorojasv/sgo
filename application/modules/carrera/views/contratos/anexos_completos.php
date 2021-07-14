@@ -39,7 +39,7 @@
                     <td><?php echo $rm->causalTrabajador ?></td>
                     <td><?php echo $rm->centroTrabajador ?></td>
                     <td align="center">
-                        <a href="<?php echo base_url()?>sanatorio/contratos/descargar_anexo/<?php echo $rm->idAnexo; ?>" title="Descargar"><i style="color: blue;" class="fa fa-download" aria-hidden="true"></i></a>
+                        <a href="<?php echo base_url()?>carrera/contratos/descargar_anexo/<?php echo $rm->idAnexo; ?>" title="Descargar"><i style="color: blue;" class="fa fa-download" aria-hidden="true"></i></a>
                     </td>
                   </tr>
                   <?php  $i++; } ?>

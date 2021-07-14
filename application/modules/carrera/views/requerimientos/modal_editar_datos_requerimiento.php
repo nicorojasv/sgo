@@ -5,7 +5,7 @@
   </div>
   <div id="modal_content">
 		<br>
-    <form action="<?php echo base_url() ?>sanatorio/requerimientos/actualizar_requerimiento" method='post' autocomplete="off">
+    <form action="<?php echo base_url() ?>carrera/requerimientos/actualizar_requerimiento" method='post' autocomplete="off">
       <?php
         if ($listado != FALSE){
         foreach ($listado as $row){

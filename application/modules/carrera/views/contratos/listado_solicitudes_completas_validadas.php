@@ -26,7 +26,7 @@
           </div>  
         <?php }?>
           <div class="col-md-4" align="center">
-            <form action="<?php echo base_url() ?>sanatorio/contratos/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
+            <form action="<?php echo base_url() ?>carrera/contratos/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
               <input title="EXPORTAR DATOS A ARCHIVO EXCEL" type="button" class="botonExcelEnjoy btn btn-success btn-block" value="Exportar a Excel"><br>
               <input type="hidden" id="datos_a_enviar" name="datos_a_enviar"/>
             </form>
@@ -94,11 +94,11 @@
                   if (!isset($completa_baja)) {                  
                 ?>
                 <td>
-                  <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
                   <?php if($this->session->userdata('tipo_usuario') == 14 || $this->session->userdata('tipo_usuario') == 8 ){?>
 
                   <i class="fa fa-minus" style="color: #ccc" aria-hidden="true"></i>
-                 <!-- <a href="<?php echo base_url() ?>sanatorio/contratos/solicitud_bajar_contrato/<?php echo $rm->id_req_usu_arch ?>" title="Solicitar baja contrato" onClick="if(confirm('¿Esta seguro de dar de baja este contrato ?')) return true; else return false;"><i class="fa fa-sign-out" style="color: red" aria-hidden="true"></i></a>-->
+                 <!-- <a href="<?php echo base_url() ?>carrera/contratos/solicitud_bajar_contrato/<?php echo $rm->id_req_usu_arch ?>" title="Solicitar baja contrato" onClick="if(confirm('¿Esta seguro de dar de baja este contrato ?')) return true; else return false;"><i class="fa fa-sign-out" style="color: red" aria-hidden="true"></i></a>-->
                   <a href="javascript:void(0)" class="solicitarBajaContrato" data-idreq="<?php echo $rm->id_req_usu_arch ?>" data-nombre="<?php echo ucwords(mb_strtolower($rm->nombres_apellidos,'UTF-8')) ?>" data-quitar="<?php echo $i ?>"><i class="fa fa-sign-out" style="color: red" aria-hidden="true"></i></a>
 
                   <?php } ?>
@@ -273,7 +273,7 @@ $(document).ready(function() {/*20-09-2018 g.r.m */
             function(evt, value ){// si presiona ok hacer esto
               $.ajax({
                   type: "POST",
-                  url: base_url+"sanatorio/contratos/solicitud_bajar_contrato/"+service,
+                  url: base_url+"carrera/contratos/solicitud_bajar_contrato/"+service,
                   data: {service: service, value: value},
                   dataType: "json",
                   success: function(data) {    

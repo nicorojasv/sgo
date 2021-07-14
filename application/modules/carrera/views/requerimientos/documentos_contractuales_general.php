@@ -3,7 +3,7 @@
 	<table class='table'>
 		<thead>
 			<th class="center">Archivos Requirimientos</th>
-			<th class="center">sanatorioado</th>
+			<th class="center">carreraado</th>
 			<th class="center">#</th>
 		</thead>
 		<tbody>
@@ -14,7 +14,7 @@
 						<?php if( $a->datos ){ ?>
 							<?php foreach($a->datos as $ar){ ?>
 								<a href="<?php echo base_url().$ar->url ?>" style="color:green" target="_blank"><?php echo $ar->nombre ?></a>
-								<a class="confirm" href="<?php echo base_url().'sanatorio/requerimiento/eliminar_documento_contractual_general/'.$ar->id ?>/<?php echo $a->id_requerimiento ?>"><i class="fa fa-times"></i></a>
+								<a class="confirm" href="<?php echo base_url().'carrera/requerimiento/eliminar_documento_contractual_general/'.$ar->id ?>/<?php echo $a->id_requerimiento ?>"><i class="fa fa-times"></i></a>
 								<br/>
 							<?php } ?>
 						<?php } else { ?>
@@ -22,18 +22,18 @@
 						<?php } ?>
 					</td>
 					<td>
-						<form method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>sanatorio/requerimiento/guardar_doc_contractual_general/<?php echo $a->usuario_id ?>/<?php echo $a->id ?>/<?php echo $asc_area ?>/<?php echo $a->id_requerimiento ?>" >
+						<form method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>carrera/requerimiento/guardar_doc_contractual_general/<?php echo $a->usuario_id ?>/<?php echo $a->id ?>/<?php echo $asc_area ?>/<?php echo $a->id_requerimiento ?>" >
 							<?php
 							if ($a->id == "1"  or $a->id == "2"){
 							?>
 							<?php foreach($a->datos as $ar){ ?>
-    	                    	<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimiento/modal_administrar_doc_general/<?php echo $ar->id ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Administrador"></a><br>
+    	                    	<a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimiento/modal_administrar_doc_general/<?php echo $ar->id ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Administrador"></a><br>
 							<?php } ?>
 							<?php
 								}elseif($a->id == "13"){
 							?>
 							<?php foreach($a->datos as $ar){ ?>
-    	                    	<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimiento/modal_administrar_archivo_usu_renuncia_voluntaria_general/<?php echo $ar->id ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Administrar"></a><br>
+    	                    	<a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimiento/modal_administrar_archivo_usu_renuncia_voluntaria_general/<?php echo $ar->id ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Administrar"></a><br>
 							<?php } ?>
 							<?php
 								}else{
@@ -57,12 +57,12 @@
 						if ($a->id == "1"  or $a->id == "2"){
 					?>
 					<td>
-                        <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimiento/modal_agregar_doc_general/<?php echo $a->usuario_id ?>/<?php echo $a->id ?>/<?php echo $asc_area ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Agregar"></a>
+                        <a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimiento/modal_agregar_doc_general/<?php echo $a->usuario_id ?>/<?php echo $a->id ?>/<?php echo $asc_area ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Agregar"></a>
 					</td>
 					<?php }elseif($a->id == "13"){
 					?>
 					<td>
-                        <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimiento/modal_agregar_doc_renuncia_voluntaria_general/<?php echo $a->usuario_id ?>/<?php echo $a->id ?>/<?php echo $asc_area ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Agregar"></a>
+                        <a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimiento/modal_agregar_doc_renuncia_voluntaria_general/<?php echo $a->usuario_id ?>/<?php echo $a->id ?>/<?php echo $asc_area ?>/<?php echo $a->id_requerimiento ?>" data-target="#ModalEditar"><input type="button" class="btn btn-xs btn-primary" value="Agregar"></a>
 					</td>
 					<?php } ?>
 				</tr>
@@ -72,7 +72,7 @@
 	<table class='table'>
 		<thead>
 			<th class="center">Archivos Generales</th>
-			<th class="center">sanatorioado</th>
+			<th class="center">carreraado</th>
 		</thead>
 		<tbody>
 			<tr>
@@ -106,7 +106,7 @@
 						<?php } ?>
 					</td>
 					<td>
-						<form method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>sanatorio/requerimiento/guardar_archivo_usuarios_generales/<?php //echo $a->usuario_id ?>/<?php //echo $a->id ?>/<?php //echo $asc_area ?>" >
+						<form method="post" enctype="multipart/form-data" action="<?php echo base_url() ?>carrera/requerimiento/guardar_archivo_usuarios_generales/<?php //echo $a->usuario_id ?>/<?php //echo $a->id ?>/<?php //echo $asc_area ?>" >
 							<input type="hidden" name="id_archivo" id="id_archivo" value="<?php echo $a->id_archivo_trabaj ?>">
 							<input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $a->id_usuario ?>">
 							<input type="hidden" name="id_requerimiento" id="id_requerimiento" value="<?php echo $a->id_requerimiento ?>">

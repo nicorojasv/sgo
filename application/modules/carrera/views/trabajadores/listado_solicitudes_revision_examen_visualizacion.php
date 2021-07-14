@@ -39,7 +39,7 @@
 								<input type="hidden" name="id_solicitud[<?php echo $i ?>]" value="<?php echo $row->id_solicitud ?>">
 							</td>
 							<td><?php echo $row->rut ?></td>
-							<td><a href="<?php echo base_url() ?>sanatorio/trabajadores/trabajador_sanatorio/<?php echo $row->usuario_id ?>" target="_blank"><?php echo $row->nombres ?></a></td>
+							<td><a href="<?php echo base_url() ?>carrera/trabajadores/trabajador_carrera/<?php echo $row->usuario_id ?>" target="_blank"><?php echo $row->nombres ?></a></td>
 							<td><?php echo $row->desc_ciudades ?></td>
 							<td><?php echo $row->fono ?></td>
 							<td><?php echo $row->especialidad1 ?> <?php if(!$row->especialidad2){}else echo " / ".$row->especialidad2 ?></td>
@@ -56,10 +56,10 @@
 									<?php if($row->masso_id != NULL){ ?>
 										<span class='badge' style='background-color:<?php echo $row->color_estado_eval_sre_masso ?>'><?php echo $row->letra_estado_eval_sre_masso ?></span><br>
 										<a style='color:<?php echo $row->color_masso ?>'><?php echo $row->masso; if($row->masso == "N/D") echo "<br>"; ?></a>
-										<a data-toggle="modal" data-target="#ModalEditar" title="Administrar examen masso" href="<?php echo base_url() ?>sanatorio/trabajadores/modal_editar_sre_eval_req/<?php echo $row->sre_eval_req_id_masso ?>/1"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+										<a data-toggle="modal" data-target="#ModalEditar" title="Administrar examen masso" href="<?php echo base_url() ?>carrera/trabajadores/modal_editar_sre_eval_req/<?php echo $row->sre_eval_req_id_masso ?>/1"><i class="fa fa-cogs" aria-hidden="true"></i></a>
 									<?php }else{
 										if($row->id_sre_agenda_masso != NULL)
-											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><a href='".base_url()."sanatorio/trabajadores/modal_agendar_examen/".$row->id_solicitud."/1/1' data-toggle='modal' data-target='#ModalEditar'><font color='blue'>Agendado</a></font>";
+											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><a href='".base_url()."carrera/trabajadores/modal_agendar_examen/".$row->id_solicitud."/1/1' data-toggle='modal' data-target='#ModalEditar'><font color='blue'>Agendado</a></font>";
 										else
 											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><br><font color='red'>No Agendado</font>";
 									} ?>
@@ -70,10 +70,10 @@
 									<?php if($row->preo_id != NULL){ ?>
 										<span class='badge' style='background-color:<?php echo $row->color_estado_eval_sre_preo ?>'><?php echo $row->letra_estado_eval_sre_preo ?></span><br>
 										<a style='color:<?php echo $row->color_preo ?>'><?php echo $row->examen_pre; if($row->examen_pre == "N/D") echo "<br>"; ?></a>
-										<a data-toggle="modal" data-target="#ModalEditar" title="Administrar examen preocupacional" href="<?php echo base_url() ?>sanatorio/trabajadores/modal_editar_sre_eval_req/<?php echo $row->sre_eval_req_id_preo ?>/1"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+										<a data-toggle="modal" data-target="#ModalEditar" title="Administrar examen preocupacional" href="<?php echo base_url() ?>carrera/trabajadores/modal_editar_sre_eval_req/<?php echo $row->sre_eval_req_id_preo ?>/1"><i class="fa fa-cogs" aria-hidden="true"></i></a>
 									<?php }else{
 										if($row->id_sre_agenda_preo != NULL)
-											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><a href='".base_url()."sanatorio/trabajadores/modal_agendar_examen/".$row->id_solicitud."/2/1' data-toggle='modal' data-target='#ModalEditar'><font color='blue'>Agendado</font></a>";
+											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><a href='".base_url()."carrera/trabajadores/modal_agendar_examen/".$row->id_solicitud."/2/1' data-toggle='modal' data-target='#ModalEditar'><font color='blue'>Agendado</font></a>";
 										else
 											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><br><font color='red'>No Agendado</font>";
 									} ?>
@@ -84,14 +84,14 @@
 									<?php if($row->eval_psic_id != NULL){ ?>
 										<span class='badge' style='background-color:<?php echo $row->color_estado_eval_sre_psic ?>'><?php echo $row->letra_estado_eval_sre_psic ?></span><br>
 										<?php if($tipo_usuario == "psicologo"){ ?>
-										<a href="<?php echo base_url() ?>sanatorio/examen_psicologico/detalle/<?php echo $row->eval_psic_id ?>" style='color:<?php echo $row->color_psic ?>' target="_blank"><?php echo $row->examen_psic; ?></a><br>
+										<a href="<?php echo base_url() ?>carrera/examen_psicologico/detalle/<?php echo $row->eval_psic_id ?>" style='color:<?php echo $row->color_psic ?>' target="_blank"><?php echo $row->examen_psic; ?></a><br>
 										<?php }else{ ?>
 										<a style='color:<?php echo $row->color_psic ?>'><?php echo $row->examen_psic; ?></a><br>
 										<?php } ?>
-										<a data-toggle="modal" data-target="#ModalEditar" title="Administrar examen psicologico" href="<?php echo base_url() ?>sanatorio/trabajadores/modal_editar_sre_eval_req/<?php echo $row->sre_eval_req_id_psic ?>/1"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+										<a data-toggle="modal" data-target="#ModalEditar" title="Administrar examen psicologico" href="<?php echo base_url() ?>carrera/trabajadores/modal_editar_sre_eval_req/<?php echo $row->sre_eval_req_id_psic ?>/1"><i class="fa fa-cogs" aria-hidden="true"></i></a>
 									<?php }else{
 										if($row->id_sre_agenda_psic != NULL)
-											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><a href='".base_url()."sanatorio/trabajadores/modal_agendar_examen/".$row->id_solicitud."/3/1' data-toggle='modal' data-target='#ModalEditar'><font color='blue'>Agendado</font></a>";
+											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><a href='".base_url()."carrera/trabajadores/modal_agendar_examen/".$row->id_solicitud."/3/1' data-toggle='modal' data-target='#ModalEditar'><font color='blue'>Agendado</font></a>";
 										else
 											echo "<span class='badge' style='background-color:#D7DF01'>EP</span><br><font color='red'>No Agendado</font>";
 									} ?>

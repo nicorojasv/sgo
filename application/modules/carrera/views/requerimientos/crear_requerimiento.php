@@ -3,7 +3,7 @@
 		<h4 class="panel-title"><i class="fa fa-pencil-square"></i> CREAR REQUERIMIENTO</h4>
 	</div>
 	<div class="panel-body">
-		<form action="<?php echo base_url() ?>sanatorio/requerimientos/guardar_datos_requerimiento" class="smart-wizard form-horizontal" role="form" id="form" method='post' name="formulario">
+		<form action="<?php echo base_url() ?>carrera/requerimientos/guardar_datos_requerimiento" class="smart-wizard form-horizontal" role="form" id="form" method='post' name="formulario">
 			<div id="wizard" class="swMain">
 				<ul class="anchor">
 					<li>

@@ -189,7 +189,7 @@
 			<?php 
 				if (empty($contratos)) {
 			?>
-          	<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_agregar_contrato_anexo/<?php echo $id_usuario ?>/1/<?php echo $id_asc_area_req ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalEditar"><input type="button" class='btn btn-blue' value="Agregar Contrato"></a>
+          	<a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/modal_agregar_contrato_anexo/<?php echo $id_usuario ?>/1/<?php echo $id_asc_area_req ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalEditar"><input type="button" class='btn btn-blue' value="Agregar Contrato"></a>
 
           	<?php 
           		}
@@ -204,7 +204,7 @@
 			<?php 
 					}else{
 			?>
-          				<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_agregar_anexo/<?php echo $id_usuario ?>/2/<?php echo $id_asc_area_req ?>/<?php echo $id_area_cargo_req ?>" id="AgregarAnexo" data-target="#ModalAnexo"><input type="button" class='btn btn-green' value="Agregar Anexo"></a>
+          				<a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/modal_agregar_anexo/<?php echo $id_usuario ?>/2/<?php echo $id_asc_area_req ?>/<?php echo $id_area_cargo_req ?>" id="AgregarAnexo" data-target="#ModalAnexo"><input type="button" class='btn btn-green' value="Agregar Anexo"></a>
 
           	<?php
           			}
@@ -217,7 +217,7 @@
           			//echo $fechaTerminoContrato;
           			if ($idArchivo != null) {
           	?>
-						<a  href="<?php echo base_url() ?>sanatorio/requerimientos/descargar_carta_termino/<?php echo $id_usuario ?>/<?php echo $idArchivo ?>/<?php echo $tipoArchivo ?>"><i title="Descargar Carta Termino" class="btn fa fa-envelope" aria-hidden="true"></i></a>
+						<a  href="<?php echo base_url() ?>carrera/requerimientos/descargar_carta_termino/<?php echo $id_usuario ?>/<?php echo $idArchivo ?>/<?php echo $tipoArchivo ?>"><i title="Descargar Carta Termino" class="btn fa fa-envelope" aria-hidden="true"></i></a>
           	<?php
           			}
           	?>
@@ -254,7 +254,7 @@
 							<td><?php echo "<label title='".str_replace("<w:br/>","\n", $row->descripcion_jornada)."'>".$row->jornada."</label>" ?></td>
 							<td><?php echo $row->renta_imponible ?></td>
     	                    <td align="center">
-    	                    	<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_administrar_contrato_anexo_doc_general/<?php echo $row->id_req_usu_arch ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalEditar2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+    	                    	<a data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/modal_administrar_contrato_anexo_doc_general/<?php echo $row->id_req_usu_arch ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalEditar2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
     	                    <?php 
     	                    	if ($row->url) {
     	                    ?>
@@ -262,7 +262,7 @@
     	                    <?php	
     	                    	}else{
     	                    ?>
-    	                    |	<a title="Subir Contrato Firmado"  data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_administrar_archivo_usu/<?php echo $row->id_req_usu_arch ?>/<?php echo $row->idAreaCargo ?>" data-target="#ModalEditar2"><i style="color: black" class="fa fa-cloud-upload" aria-hidden="true"></i></a>
+    	                    |	<a title="Subir Contrato Firmado"  data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/modal_administrar_archivo_usu/<?php echo $row->id_req_usu_arch ?>/<?php echo $row->idAreaCargo ?>" data-target="#ModalEditar2"><i style="color: black" class="fa fa-cloud-upload" aria-hidden="true"></i></a>
     	                    <?php
     	                    	}
     	                    	if ($row->fecha_termino2>= date('Y-m-d')) {
@@ -298,13 +298,13 @@
     	                    	<?php 
     	                    		if ($row->estado == 0) { //creado
     	                    	?>
-    	                    			<a data-toggle="modal" title="Modificar Fecha Termino" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_administrar_anexo/<?php echo $row->id_req_usu_arch ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalAnexo"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+    	                    			<a data-toggle="modal" title="Modificar Fecha Termino" href="<?php echo base_url() ?>carrera/requerimientos/modal_administrar_anexo/<?php echo $row->id_req_usu_arch ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalAnexo"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
     	                    		<?php if ($contrato ==1) { ?>
     	                    			<a onclick="enviar_revision(this)" data-id="<?php echo $row->id_req_usu_arch ?>" data-nombre="<?php echo $nombres ?>" data-fecha="<?php echo $row->fecha_termino?>"  title="Enviar a revision"><i style="cursor: pointer;" class="fa fa-arrow-up" aria-hidden="true"></i></a> |
     	                    		<?php }else{?>
     	                    			<a  title="No es posible enviar a revision si no hay contrato validado"><i style="cursor: pointer;color: black" class="fa fa-arrow-up" aria-hidden="true"></i></a> |
     	                    		<?php }?>
-    	                    			<!--<a href="<?php echo base_url() ?>sanatorio/requerimientos/eliminar_anexo/<?php echo $row->id_req_usu_arch ?>" title="Eliminar Anexo"><i style="color:red;" class="fa fa-times" aria-hidden="true"></i></a>-->
+    	                    			<!--<a href="<?php echo base_url() ?>carrera/requerimientos/eliminar_anexo/<?php echo $row->id_req_usu_arch ?>" title="Eliminar Anexo"><i style="color:red;" class="fa fa-times" aria-hidden="true"></i></a>-->
     	                    			<a onclick="confirmar(this)" data-id="<?php echo $row->id_req_usu_arch ?>" data-nombre="<?php echo $nombres ?>" data-fecha="<?php echo $row->fecha_termino?>" title="Eliminar Anexo"><i style="color:red; cursor: pointer;" class="fa fa-times" aria-hidden="true"></i></a>
     	                    	<?php	
     	                    		}elseif ($row->estado == 1) {// en espera de revision
@@ -313,7 +313,7 @@
     	                    	<?php 
     	                    		}elseif ($row->estado == 2) {// ya revisado
     	                    	?>
-    	                    			<a href="<?php echo base_url() ?>sanatorio/requerimientos/descargar_anexo/<?php echo $row->id_req_usu_arch ?>" title="Descargar Anexo"><i style="color: green" class="fa fa-download" aria-hidden="true"></i></a>
+    	                    			<a href="<?php echo base_url() ?>carrera/requerimientos/descargar_anexo/<?php echo $row->id_req_usu_arch ?>" title="Descargar Anexo"><i style="color: green" class="fa fa-download" aria-hidden="true"></i></a>
     	                    		<?php 
 			    	                    	if ($row->url) {
 			    	                    ?>
@@ -321,14 +321,14 @@
 			    	                    <?php	
 			    	                    	}else{
 			    	                    ?>
-			    	                    |	<a title="Subir Anexo Firmado"  data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_cargar_anexo/<?php echo $row->id_req_usu_arch ?>" data-target="#ModalEditar2"><i style="color: black" class="fa fa-cloud-upload" aria-hidden="true"></i></a>
+			    	                    |	<a title="Subir Anexo Firmado"  data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/modal_cargar_anexo/<?php echo $row->id_req_usu_arch ?>" data-target="#ModalEditar2"><i style="color: black" class="fa fa-cloud-upload" aria-hidden="true"></i></a>
 			    	                <?php
 			    	                    	}
 			    	                ?>
     	                    	<?php
     	                    		}elseif ($row->estado == 6) {// ya revisado
     	                    	?>
-									<a data-toggle="modal" title="Modificar Fecha Termino" href="<?php echo base_url() ?>sanatorio/requerimientos/modal_administrar_anexo/<?php echo $row->id_req_usu_arch ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalAnexo"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> | 
+									<a data-toggle="modal" title="Modificar Fecha Termino" href="<?php echo base_url() ?>carrera/requerimientos/modal_administrar_anexo/<?php echo $row->id_req_usu_arch ?>/<?php echo $id_area_cargo_req ?>" data-target="#ModalAnexo"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> | 
     	                    			<a onclick="enviar_revision(this)" data-id="<?php echo $row->id_req_usu_arch ?>" data-nombre="<?php echo $nombres ?>" data-fecha="<?php echo $row->fecha_termino?>"  title="Enviar a revision"><i style="cursor: pointer;" class="fa fa-arrow-up" aria-hidden="true"></i></a> |
     	                    			<a onclick="confirmar(this)" data-id="<?php echo $row->id_req_usu_arch ?>" data-nombre="<?php echo $nombres ?>" data-fecha="<?php echo $row->fecha_termino?>" title="Eliminar Anexo"><i style="color:red; cursor: pointer;" class="fa fa-times" aria-hidden="true"></i></a>
     	                    	<?php 
@@ -419,7 +419,7 @@
 		  	function(){ //Si confirmo 
 		  		        $.ajax({
 				            type: "POST",
-				            url: base_url+"sanatorio/requerimientos/eliminar_anexo/"+id,
+				            url: base_url+"carrera/requerimientos/eliminar_anexo/"+id,
 				            data: id,
 				            dataType: "json",
 				            success: function(data) {   
@@ -448,7 +448,7 @@
 		  		$('#content').html("<div class='loading'><img src='"+base_url+"extras/img/loader2.gif' alt='loading' /><br/>Un momento, por favor...</div>");
 		  		        $.ajax({
 				            type: "POST",
-				            url: base_url+"sanatorio/requerimientos/enviar_revision/"+id,
+				            url: base_url+"carrera/requerimientos/enviar_revision/"+id,
 				            data: id,
 				            dataType: "json",
 				            success: function(data) {  
@@ -569,7 +569,7 @@ $.datepicker.setDefaults($.datepicker.regional['es']);
 $(document).on('click', '.enviarFechaFiniquito', function() {
 	    $.ajax({
             type: 'POST',
-            url: base_url+'sanatorio/requerimientos/guardar_fecha_finiquito',
+            url: base_url+'carrera/requerimientos/guardar_fecha_finiquito',
             data: {
                 'fecha_termino2': $('#datepicker').val(),
                 'comentario': $('#comentario').val(),

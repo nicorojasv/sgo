@@ -1,6 +1,6 @@
 <div id="modal">
   <div id="modal_content">
-    <form action="<?php echo base_url() ?>sanatorio/contratos/generar_contrato_anexo_doc_contractual" method='post' enctype="multipart/form-data">
+    <form action="<?php echo base_url() ?>carrera/contratos/generar_contrato_anexo_doc_contractual" method='post' enctype="multipart/form-data">
     <?php if($datos_generales != FALSE){ ?>
       <?php foreach ($datos_generales as $usu){ 
        if(isset($usu->codigoContrato)) $codigoContrato = $usu->codigoContrato; 

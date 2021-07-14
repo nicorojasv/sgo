@@ -47,7 +47,7 @@
 						<td class="center"><?php echo $this->Cargos_model->r_get($c)->nombre; ?></td>
 						<?php for($i=0;$i<count($areas);$i++){ ?>
 						<td class="center">
-							<a style='width:100%;height:100%;display:block;' href='<?php echo base_url() ?>sanatorio/requerimiento/usuarios_requerimiento/<?php echo $ids[$z] ?>'>
+							<a style='width:100%;height:100%;display:block;' href='<?php echo base_url() ?>carrera/requerimiento/usuarios_requerimiento/<?php echo $ids[$z] ?>'>
 								<?php echo $asignadas[$z] ?>/<?php echo $personas[$z] ?>
 							</a>
 						</td>

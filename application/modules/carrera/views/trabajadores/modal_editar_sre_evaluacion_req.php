@@ -234,7 +234,7 @@ $( "form" ).submit(function( event ) {
   var opcionSeleccionada = document.getElementById("seleccion"+idSolicitud).value;
                       $.ajax({
                         type: "POST",
-                        url: base_url+"sanatorio/trabajadores/actualizar_sre_eval_req/",
+                        url: base_url+"carrera/trabajadores/actualizar_sre_eval_req/",
                         data: formulario,
                         dataType: "json",
                         success: function(data) {    

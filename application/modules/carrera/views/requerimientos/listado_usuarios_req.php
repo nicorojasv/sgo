@@ -5,7 +5,7 @@
 		<h2 class="panel-title" style="text-align:center" id="log"></h2>
 	</div>
 	<div class="panel-body">
-  		<form action="<?php echo base_url() ?>sanatorio/requerimientos/agregar_usuarios_requerimiento" role="form" id="form" method='post' autocomplete="off">
+  		<form action="<?php echo base_url() ?>carrera/requerimientos/agregar_usuarios_requerimiento" role="form" id="form" method='post' autocomplete="off">
 		<div class="row" >
 			<div class="col-md-1"></div>
 			<div class="col-md-7" >

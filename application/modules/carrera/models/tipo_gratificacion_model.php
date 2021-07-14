@@ -2,12 +2,12 @@
 class Tipo_gratificacion_model extends CI_Model {
 
 	function __construct(){
-		$this->sanatorio = $this->load->database('sanatorio', TRUE);
+		$this->carrera = $this->load->database('carrera', TRUE);
 	}
 
 	function get($id){
-		$this->sanatorio->where("id",$id);
-		$query = $this->sanatorio->get('tipo_gratificacion');
+		$this->carrera->where("id",$id);
+		$query = $this->carrera->get('tipo_gratificacion');
 		return $query->row();
 	}
 

@@ -14,7 +14,7 @@
 		<h2 class="panel-title"><b>Trabajadores ingresados para envio de solicitud de revision de examenes</b></h2>
 	</div>
 	<div class="panel-body">
-  		<form action="<?php echo base_url() ?>sanatorio/trabajadores/enviar_solicitud_revision_examenes" method='post'>
+  		<form action="<?php echo base_url() ?>carrera/trabajadores/enviar_solicitud_revision_examenes" method='post'>
 			<div class="row">
 				<div class="col-md-12">
 					<table id="example1">
@@ -79,7 +79,7 @@
 									<input type="checkbox" name="check_estado[<?php echo $i ?>]" id="check_estado[<?php echo $i ?>]" value="<?php echo $row->usuario_id ?>" <?php if($row->req_activos == 0) echo "title='Este trabajador no esta asociado a un requerimiento activo' disabled"; ?> >
 								</td>
 								<td>
-									<a title="Eliminar Solicitud" class="eliminar" href="<?php echo base_url() ?>sanatorio/trabajadores/eliminar_solicitud_previa_revision_examen/<?php echo $row->id_solicitud_previa ?>"><i class="fa fa-trash-o"></i></a>
+									<a title="Eliminar Solicitud" class="eliminar" href="<?php echo base_url() ?>carrera/trabajadores/eliminar_solicitud_previa_revision_examen/<?php echo $row->id_solicitud_previa ?>"><i class="fa fa-trash-o"></i></a>
 								</td>
 							</tr>
 							<?php } ?>

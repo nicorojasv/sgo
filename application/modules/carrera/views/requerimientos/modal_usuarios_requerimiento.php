@@ -1,7 +1,7 @@
 <div id="modal">
   <div id="modal_content">
     Requerimiento <?php echo $id_area_cargo ?>
-    <form action="<?php echo base_url() ?>sanatorio/trabajadores/actualizar_trabajador" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data" autocomplete="off">
+    <form action="<?php echo base_url() ?>carrera/trabajadores/actualizar_trabajador" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data" autocomplete="off">
       <?php
         if ($lista_aux != FALSE){
         foreach ($lista_aux as $row){

@@ -10,9 +10,9 @@
           </div>
           <div class="col-md-10">
             <select class="form-control" onchange="location = this.value">
-              <option value="<?php echo base_url() ?>sanatorio/contratos/solicitudes_completas">[Todas]</option>
+              <option value="<?php echo base_url() ?>carrera/contratos/solicitudes_completas">[Todas]</option>
               <?php foreach($listado_plantas as $ep){ ?>
-              <option value="<?php echo base_url() ?>sanatorio/contratos/solicitudes_completas/<?php echo $ep->id ?>" <?php if($planta_seleccionada == $ep->id) echo "selected" ?> ><?php echo $ep->nombre ?></option>
+              <option value="<?php echo base_url() ?>carrera/contratos/solicitudes_completas/<?php echo $ep->id ?>" <?php if($planta_seleccionada == $ep->id) echo "selected" ?> ><?php echo $ep->nombre ?></option>
               <?php } ?>
             </select>
           </div>
@@ -28,7 +28,7 @@
       <div class="col-md-3"></div>
       
       <div class="col-md-3" align="center">
-            <form action="<?php echo base_url() ?>sanatorio/contratos/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
+            <form action="<?php echo base_url() ?>carrera/contratos/exportar_excel_contratos_y_anexos" method="post" target="_blank" id="FormularioExportacion">
               <input title="EXPORTAR DATOS A ARCHIVO EXCEL" type="image" src="<?php echo base_url() ?>extras/imagenes/Excel-Export.jpg" class="botonExcelArauco " value="Exportar a Excel"><br>
               <input type="hidden" id="datos_a_enviar" name="datos_a_enviar"/>
             </form>
@@ -80,7 +80,7 @@
                 <td><?php echo $rm->renta_imponible ?></td>
                 <?php if (!isset($completa_baja)) { ?>
                 <td>
-                  <a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  <a data-toggle="modal" href="<?php echo base_url() ?>carrera/contratos/modal_visualizar_contrato_anexo_doc_general/<?php echo $rm->id_req_usu_arch ?>" data-target="#ModalEditar" title="Visualizar mas detalles"><i class="fa fa-search" aria-hidden="true"></i></a>
                   <?php 
                     if($this->session->userdata('tipo_usuario') == 2 || 
                        $this->session->userdata('tipo_usuario') == 4 ||  
@@ -230,7 +230,7 @@
                   function(evt, value ){// si presiona ok hacer esto
                     $.ajax({
                         type: "POST",
-                        url: base_url+"sanatorio/contratos/solicitud_bajar_contrato/"+service,
+                        url: base_url+"carrera/contratos/solicitud_bajar_contrato/"+service,
                         data: {service: service, value: value},
                         dataType: "json",
                         success: function(data) {    

@@ -9,7 +9,7 @@ document.getElementById("resultado").value = diffDays;
 }
 </script>
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimiento/actualizar_doc_contractual_general/<?php echo $id_usu_arch?>/<?php echo $id_area_cargo?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimiento/actualizar_doc_contractual_general/<?php echo $id_usu_arch?>/<?php echo $id_area_cargo?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <!--<div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h4 class="modal-title" id="exampleModalLabel" align="center">Actualizaci&oacute;n de Categoria</h4>

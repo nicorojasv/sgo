@@ -45,15 +45,15 @@
 								<td><?php echo $ar_car->nombre_area; ?></td>
 								<td><?php echo $ar_car->nombre_cargo; ?></td>
 								<td style="text-align:center">
-									<a style='width:100%;height:100%;display:block;' href='<?php echo base_url() ?>sanatorio/requerimientos/usuarios_requerimiento/<?php echo $ar_car->id ?>'>
+									<a style='width:100%;height:100%;display:block;' href='<?php echo base_url() ?>carrera/requerimientos/usuarios_requerimiento/<?php echo $ar_car->id ?>'>
 										<?php echo $ar_car->asignadas ?>/<?php echo $ar_car->cantidad ?>
 									</a>
 								</td>
 								<td style="text-align:center"><?php echo $ar_car->valor_aprox; ?></td>
 								<td style="text-align:center">
-									<a title="Editar datos Area/Cargo Requerimiento" data-target="#ModalEditar" data-toggle="modal" href="<?php echo base_url() ?>sanatorio/requerimientos/editar_area_cargo_requerimiento/<?php echo $ar_car->id ?>/<?php echo $id_req ?>"><i class="fa fa-pencil fa-fw"></i></a>
+									<a title="Editar datos Area/Cargo Requerimiento" data-target="#ModalEditar" data-toggle="modal" href="<?php echo base_url() ?>carrera/requerimientos/editar_area_cargo_requerimiento/<?php echo $ar_car->id ?>/<?php echo $id_req ?>"><i class="fa fa-pencil fa-fw"></i></a>
 				          <!--
-                  <a title="Eliminar Area/Cargo Requerimiento" class="eliminar" href="<?php echo base_url() ?>sanatorio/requerimientos/eliminar_area_cargo_req/<?php echo $ar_car->id ?>/<?php echo $id_req ?>"><i class="fa fa-trash-o"></i></a>
+                  <a title="Eliminar Area/Cargo Requerimiento" class="eliminar" href="<?php echo base_url() ?>carrera/requerimientos/eliminar_area_cargo_req/<?php echo $ar_car->id ?>/<?php echo $id_req ?>"><i class="fa fa-trash-o"></i></a>
 								  -->
                 </td>
 							</tr>
@@ -87,7 +87,7 @@
 		 ?>
 	    </div><br>
       <div class="modal-body">
-        <form action="<?php echo base_url() ?>sanatorio/requerimientos/guardar_area_cargo_req" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+        <form action="<?php echo base_url() ?>carrera/requerimientos/guardar_area_cargo_req" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
           <input type="hidden" name="id_req" id="id_req" value="<?php echo $row->id ?>">
           <div class="col-md-8">
             <div class="control-group">

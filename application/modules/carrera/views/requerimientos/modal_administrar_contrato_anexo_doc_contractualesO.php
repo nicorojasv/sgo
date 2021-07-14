@@ -1,5 +1,5 @@
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimientos/actualizar_contrato_anexo_doc_contractual/<?php echo $id_usu_arch?>/<?php echo $id_area_cargo?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data" onsubmit ="return bloqEnvio()" >
+  <form action="<?php echo base_url() ?>carrera/requerimientos/actualizar_contrato_anexo_doc_contractual/<?php echo $id_usu_arch?>/<?php echo $id_area_cargo?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data" onsubmit ="return bloqEnvio()" >
     <div id="modal_content">
       <?php
       if($datos_generales != FALSE){
@@ -447,7 +447,7 @@ if($datos_usu_arch != FALSE){
 
                   foreach ($contratoHoy as $key ) {
                 ?>
-                    <label>Puede ver el contrato vigente <a href="<?php echo base_url()?>sanatorio/requerimientos/contratos_req_trabajador/<?php echo $key->idUsuario."/".$key->id."/".$key->idAreaCargo ?>">aquí</a></label>
+                    <label>Puede ver el contrato vigente <a href="<?php echo base_url()?>carrera/requerimientos/contratos_req_trabajador/<?php echo $key->idUsuario."/".$key->id."/".$key->idAreaCargo ?>">aquí</a></label>
                 <?php      
                   }
                 ?>

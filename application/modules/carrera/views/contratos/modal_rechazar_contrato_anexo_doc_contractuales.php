@@ -1,6 +1,6 @@
 <div id="modal">
   <div id="modal_content">
-    <form action="<?php echo base_url() ?>sanatorio/contratos/rechazar_contrato_anexo_doc_general" method='post' enctype="multipart/form-data">
+    <form action="<?php echo base_url() ?>carrera/contratos/rechazar_contrato_anexo_doc_general" method='post' enctype="multipart/form-data">
     <input type="hidden" name="id_usu_arch" value="<?php echo $id_usu_arch ?>">
     <?php if($datos_generales != FALSE){ ?>
       <?php foreach ($datos_generales as $usu){ ?>

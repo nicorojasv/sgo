@@ -1,6 +1,6 @@
 <div class="panel panel-white">
 	<div class="panel-heading">
-		<h4 class="panel-title">Listado de Horarios sanatorio</h4>
+		<h4 class="panel-title">Listado de Horarios carrera</h4>
 	</div>
 	<div class="panel-body">
 		<div class="row">
@@ -28,9 +28,9 @@
 						<td><?php echo $l->nombre_horario; ?></td>
 						<td><?php echo $l->descripcion; ?></td>
 						<td class="center">
-							<a data-toggle="modal" href="<?php echo base_url() ?>sanatorio/horarios/modal_editar/<?php echo $l->id ?>" class="btn btn-xs btn-blue tooltips editar" data-target="#ModalEditar"><i class="fa fa-edit"></i></a>
+							<a data-toggle="modal" href="<?php echo base_url() ?>carrera/horarios/modal_editar/<?php echo $l->id ?>" class="btn btn-xs btn-blue tooltips editar" data-target="#ModalEditar"><i class="fa fa-edit"></i></a>
 							<!--
-							<a href="<?php echo base_url() ?>sanatorio/horarios/eliminar/<?php echo $l->id ?>" class="btn btn-xs btn-red tooltips eliminar" data-placement="top" data-original-title="Eliminar"><i class="fa fa-times fa fa-white"></i></a>
+							<a href="<?php echo base_url() ?>carrera/horarios/eliminar/<?php echo $l->id ?>" class="btn btn-xs btn-red tooltips eliminar" data-placement="top" data-original-title="Eliminar"><i class="fa fa-times fa fa-white"></i></a>
 							-->
 						</td>
 					</tr>
@@ -69,7 +69,7 @@
 				<h2 class="modal-title" id="myModalLabel">Ingreso Nuevo Horario</h2>
 			</div>
 			<div class="modal-body">
-				<form action="<?php echo base_url() ?>sanatorio/horarios/guardar_nuevo_horario" method='post'>
+				<form action="<?php echo base_url() ?>carrera/horarios/guardar_nuevo_horario" method='post'>
 					<div class="col-md-12">
 						<div class="control-form">
 							<label class="control-label" for="titulo">Titulo</label>

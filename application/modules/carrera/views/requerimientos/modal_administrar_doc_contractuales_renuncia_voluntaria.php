@@ -1,5 +1,5 @@
 <div id="modal">
-  <form action="<?php echo base_url() ?>sanatorio/requerimiento/actualizar_doc_contractual_renuncia_voluntaria/<?php echo $id_req_usu_arch?>/<?php echo $id_area_req ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
+  <form action="<?php echo base_url() ?>carrera/requerimiento/actualizar_doc_contractual_renuncia_voluntaria/<?php echo $id_req_usu_arch?>/<?php echo $id_area_req ?>" role="form" id="form2" method='post' name="f2" enctype="multipart/form-data">
   <div id="modal_content">
 		<div class="modal-header">
       <h5>Instrucciones:</h5>

@@ -4,7 +4,7 @@
 	</div>
 	<div class="panel-body">
 	<hr>
-	<form action="<?php echo base_url() ?>sanatorio/trabajadores/guardar_nuevo_trabajador" method='post'>
+	<form action="<?php echo base_url() ?>carrera/trabajadores/guardar_nuevo_trabajador" method='post'>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
