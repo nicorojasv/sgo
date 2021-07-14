@@ -705,6 +705,67 @@ $activo = $this->session->userdata('activo');
 	</ul>
 </li>
 
+<li  <?php if(isset($numMenu)){if ($numMenu == 5)echo "class='open'"; }?>>
+	<a href="javascript:void(0)"><i class="fa fa-home"></i> <span class="title" >CLINICAS LOS CARRERAS</span></a>
+	<ul class="sub-menu" <?php if(isset($numMenu)){if ($numMenu == 6)echo "style='display: block;'"; }?>>
+		<!--3.1-->
+		<li  class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_horarios')echo "active"; }?> " >
+			<a   href="<?php echo base_url() ?>carrera/horarios"><i class="fa fa-home"></i> <span class="title"> Gestion de Horarios </span></a>
+		</li>
+		<!--3.2-->
+		<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_trabajadores')echo "active"; }?> " data="6.2-wood_trabajadores">
+			<a  href="<?php echo base_url() ?>carrera/trabajadores"><i class="fa fa-home"></i> <span class="title"> Listado Trabajadores </span></a>
+		</li>
+		<!--3.3-->
+		<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_listado')echo "active"; }?> " data="6.3-wood_listado">
+			<a  href="<?php echo base_url() ?>carrera/requerimientos/listado"><i class="fa fa-home"></i> <span class="title"> Requerimientos </span></a>
+		</li>
+		<!--3.4-->
+		
+		<li>
+			<a  href="javascript:void(0)"><i class="fa fa-user"></i> <span class="title"> Solicitudes de Contratos </span></a>
+			<ul class="sub-menu"  <?php if(isset($menu)){if($menu == '6.41')echo "style='display: block;'"; }?>>
+				<!--6.41-->
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_sol_pendie')echo "active"; }?> " data="6.41-wood_sol_pendie">
+					<a class="wood" href="<?php echo base_url() ?>carrera/contratos/solicitudes_pendientes"><i class="fa fa-user"></i> <span class="title"> Solicitudes Pendientes </span></a>
+				</li>
+				<!--6.41-->
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_sol_compl')echo "active"; }?> " data="6.41-wood_sol_compl">
+					<a class="wood" href="<?php echo base_url() ?>carrera/contratos/solicitudes_completas"><i class="fa fa-user"></i> <span class="title"> Solicitudes Completas </span></a>
+				</li>
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_sol_pen_baj')echo "active"; }?> " data="6.41-wood_sol_pen_baj">
+					<a class="wood" href="<?php echo base_url() ?>carrera/contratos/solicitudes_pendientes_baja"><i class="fa fa-user"></i> <span class="title"> Solicitud en proceso de baja </span></a>
+				</li>
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_sol_compl_baj')echo "active"; }?> " data="6.41-wood_sol_compl_baj">
+					<a  href="<?php echo base_url() ?>carrera/contratos/solicitudes_completas_baja"><i class="fa fa-user"></i> <span class="title"> Solicitudes Bajadas </span></a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a  href="javascript:void(0)"><i class="fa fa-user"></i> <span class="title"> Solicitudes de Anexos  </span></a>
+			<ul class="sub-menu" <?php if(isset($menu)){if($menu == '1.16')echo "style='display: block;'"; }?> >
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'est_cont_soli_pendiAnexo')echo "active"; }?> " data="1.16-est_cont_soli_pendiAnexo">
+					<a class="AraucoColor" href="<?php echo base_url() ?>carrera/contratos/solicitudes_pendientes_anexo"><i class="fa fa-user"></i> <span class="title"> Solicitudes Pendientes </span></a>
+				</li>
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'est_solicitudes_completasAnexo')echo "active"; }?> " data="1.16-est_solicitudes_completasAnexo">
+					<a class="AraucoColor" href="<?php echo base_url() ?>carrera/contratos/solicitudes_completas_anexo"><i class="fa fa-user"></i> <span class="title"> Solicitudes Completas </span></a>
+				</li>
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'est_sol_pen_bajAnexo')echo "active"; }?> " data="1.16-est_sol_pen_bajAnexo">
+					<a class="AraucoColor" href="<?php echo base_url() ?>carrera/contratos/solicitudes_pendientes_baja_anexo"><i class="fa fa-user"></i> <span class="title"> Solicitud en proceso de baja </span></a>
+				</li>
+				<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'est_sol_compl_bajAnexo')echo "active"; }?> " data="1.16-est_sol_compl_bajAnexo">
+					<a class="AraucoColor" href="<?php echo base_url() ?>carrera/contratos/solicitudes_completas_baja_anexo"><i class="fa fa-user"></i> <span class="title"> Solicitudes Bajadas </span></a>
+				</li>
+			</ul>
+		</li>
+		<!--3.5-->
+		<li class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_contratos_y_anexos')echo "active"; }?> " data="6.5-wood_contratos_y_anexos">
+			<a  href="<?php echo base_url() ?>carrera/trabajadores/contratos_y_anexos"><i class="fa fa-home"></i> <span class="title"> Contratos & Anexos </span> </a>
+		</li>
+		<!--3.6-->
+		
+	</ul>
+</li>
 
 
 	
