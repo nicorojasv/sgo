@@ -117,11 +117,14 @@ class Contratos extends CI_Controller{
 				$id_region_planta = isset($get_planta->id_regiones)?$get_planta->id_regiones:'';
 				$id_ciudad_planta = isset($get_planta->id_ciudades)?$get_planta->id_ciudades:'';
 				$id_gratif_planta = isset($get_planta->id_gratificacion)?$get_planta->id_gratificacion:'';
+				
 				$get_gratif = $this->Tipo_gratificacion_model->get($id_gratif_planta);
 				$get_region_planta = $this->Region_model->get($id_region_planta);
 				$get_ciudad_planta = $this->Ciudad_model->get($id_ciudad_planta);
 				#12-11-2018 incorporacion banco, tipo  y numero de cuenta.
 				$id_banco = isset($usr->id_bancos)?$usr->id_bancos:1;
+				$get_codigouny = $this->Requerimientos_model->getcodigoUny($id_banco);
+				$aux->codigoUny = isset($get_codigouny->codigoUny)?$get_codigouny->codigoUny:'';
 				$nombreB  = $this->Usuarios_model->getNombreBanco($id_banco);
 				$aux->nombre_banco = $nombreB->desc_bancos;
 				$aux->tipo_cuenta = isset($usr->tipo_cuenta)?$usr->tipo_cuenta:'';

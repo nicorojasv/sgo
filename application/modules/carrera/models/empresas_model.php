@@ -2,17 +2,17 @@
 class Empresas_model extends CI_Model {
 
 	function __construct(){
-		$this->carerra = $this->load->database('carerra', TRUE);
+		$this->carrera = $this->load->database('carrera', TRUE);
 	}
 
 	function listar(){
-		$query = $this->carerra->get('empresa');
+		$query = $this->carrera->get('empresa');
 		return $query->result();
 	}
 	
 	function get($id){
-		$this->carerra->where('id',$id);
-		$query = $this->carerra->get('empresa');
+		$this->carrera->where('id',$id);
+		$query = $this->carrera->get('empresa');
 		return $query->row();
 	}
 	
@@ -20,23 +20,23 @@ class Empresas_model extends CI_Model {
 
 
 	function get_rut($rut){
-		$this->carerra->where('rut',$rut);
-		$query = $this->carerra->get('empresa');
+		$this->carrera->where('rut',$rut);
+		$query = $this->carrera->get('empresa');
 		return $query->row();
 	}
 	
 	function editar($id,$data){
-		$this->carerra->where('id', $id);
-		$this->carerra->update('empresa', $data); 
+		$this->carrera->where('id', $id);
+		$this->carrera->update('empresa', $data); 
 	}
 	
 	function ingresar($data){
-		$this->carerra->insert('empresa',$data); 
-		return $this->carerra->insert_id();
+		$this->carrera->insert('empresa',$data); 
+		return $this->carrera->insert_id();
 	}
 	
 	function eliminar($id){
-		$this->carerra->delete('empresa', array('id' => $id)); 
+		$this->carrera->delete('empresa', array('id' => $id)); 
 	}
 
 }

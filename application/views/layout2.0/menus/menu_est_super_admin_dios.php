@@ -709,7 +709,7 @@ $activo = $this->session->userdata('activo');
 	<a href="javascript:void(0)"><i class="fa fa-home"></i> <span class="title" >CLINICAS LOS CARRERAS</span></a>
 	<ul class="sub-menu" <?php if(isset($numMenu)){if ($numMenu == 6)echo "style='display: block;'"; }?>>
 		<!--3.1-->
-		<li  class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_horarios')echo "active"; }?> " >
+		<li  class=" clickButtonMenu <?php if(isset($nombre)){ if($nombre === 'wood_horarios')echo "active"; }?> " data="6.2-wood_trabajadores">
 			<a   href="<?php echo base_url() ?>carrera/horarios"><i class="fa fa-home"></i> <span class="title"> Gestion de Horarios </span></a>
 		</li>
 		<!--3.2-->

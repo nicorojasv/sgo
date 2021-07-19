@@ -67,7 +67,7 @@
         <div class="col-md-8"></div>
         <div class="col-md-4">
           <br>
-          <button id="myButtonControlID" class="btn btn-green">Exportar a Excel</button>
+          <button id="myButtonControlID" class="btn btn-green">Exportarcito a Excel</button>
           <button type="submit" class="btn btn-yellow">Aprobación Masiva</button>
           <br><br>
         </div>
@@ -138,7 +138,7 @@
     <meta charset="UTF-8">
     <table>
       <thead>
-        <th>Solicitante</th>
+        <th>Solicitantesss</th>
         <th>Nombres Trabajador</th>
         <th>Rut</th>
         <th>Nacionalidad</th>
@@ -172,7 +172,8 @@
         <th>Nivel Educacional</th>
         <th>Planta</th>
         <th>Banco </th>
-        <th>Tipo de Cuenta </th>
+        <th>codigo_banco<th>
+        <th>codigo Uny </th>
         <th>Numero de Cuenta</th>
       </thead>
       <tbody>
@@ -213,9 +214,10 @@
           <td><?php echo $rm->nombre_planta ?></td>
           <td><?php echo $rm->banco ?></td>
           <td><?php echo $rm->tipo_cuenta ?></td>
+          <td><?php echo $rm->codigoUny  ?></td>
           <td><?php echo $rm->cuenta_banco ?></td> 
         </tr>
         <?php $i++; } ?>
       </tbody>
     </table>
-  </div>
+  </div> 

@@ -160,6 +160,7 @@
          <th>nombre_banco</th>
         <th>tipo_cuenta</th>
         <th>cuenta_banco</th>
+        <th>codigo uny</th>
         <th>correo</th>
       </thead>
       <tbody>
@@ -210,6 +211,7 @@
           <td><?php echo $rm->nombre_banco ?></td>
           <td><?php echo $rm->tipo_cuenta ?></td>
           <td><?php echo $rm->cuenta_banco ?></td>
+          <td><?php echo $rm->codigoUny ?></td>
           <td><?php echo $rm->correo ?></td>
         </tr>
         <?php $i++; } ?>

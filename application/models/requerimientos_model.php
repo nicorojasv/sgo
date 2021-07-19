@@ -547,5 +547,14 @@ class Requerimientos_model extends CI_Model{
 		
 	}
 
+	function getcodigoUny($id_banco){
+		$this->db->select('*');
+		$this->db->from('bancos');
+		$this->db->where('id',$id_banco);
+		$query = $this->db->get();
+		return $query->row();
+	}
+
 }
+
 ?>
